@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Latin America Mission">
+  <rect width="64" height="64" rx="10" fill="#0a1729"/>
+  <path d="M14 16h6v26h14v6H14z" fill="#e2cb92"/>
+  <path d="M38 48 46 16h6l8 32h-6l-1.6-7h-7.2L43.6 48zm8.6-13h5.2L49.2 24z" fill="#c9a962"/>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "name": "latin-america-mission",
+  "version": "1.0.0",
+  "description": "Sito Latin America Mission \u2014 Ceara, Brasile, 16-23 novembre 2026",
+  "scripts": {
+    "build": "python3 src/build.py",
+    "dev": "python3 -m http.server 8231",
+    "audit": "node src/audit.mjs http://localhost:8231"
+  },
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "playwright": "^1.49.1"
+  },
+  "private": true
+}
