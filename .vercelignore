@@ -1,0 +1,7 @@
+src/
+node_modules/
+.audit/
+.claude/
+package.json
+package-lock.json
+README.md

@@ -10,6 +10,7 @@ unico sorgente di contenuti.
 ## Struttura
 
 ```
+vercel.json           configurazione deploy
 index.html            pagina IT    (generata — non modificare a mano)
 en/index.html         pagina EN    (generata — non modificare a mano)
 pt/index.html         pagina PT-BR (generata — non modificare a mano)
@@ -50,6 +51,29 @@ node src/audit.mjs http://localhost:8231
 ```
 
 Esce con codice 1 se trova problemi. Gli screenshot finiscono in `.audit/`.
+
+## Deploy su Vercel
+
+Il repo è già configurato: [`vercel.json`](vercel.json) disattiva la build (l'HTML è generato e
+committato), imposta `cleanUrls` e `trailingSlash` in modo che `/en` e `/pt` servano `/en/` e
+`/pt/` come nei canonical, e aggiunge cache e header di sicurezza. `.vercelignore` tiene fuori
+`src/`, `node_modules/` e il tooling.
+
+**Via dashboard (consigliato).** Su vercel.com → *Add New… → Project* → importa
+`Ediliziaio/latin-america-mission` → Deploy. Da lì in poi ogni `git push` su `main` va in
+produzione da solo e ogni branch ottiene la sua preview.
+
+**Via CLI**, se preferisci dal terminale:
+
+```bash
+npm i -g vercel && cd ~/latin-america-mission && vercel --prod
+```
+
+Il primo `vercel` chiede il login nel browser e crea il progetto; i successivi deployano e basta.
+
+Dopo il primo deploy, in *Settings → Domains* collega `latinamericamission.armandorossi.it`:
+finché il dominio non è collegato, gli URL canonical e la sitemap puntano a un indirizzo che
+non risponde ancora.
 
 ## Modificare i contenuti
 
