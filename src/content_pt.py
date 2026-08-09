@@ -83,11 +83,20 @@ PT = {
         ("03", "Matérias-primas e indústria", "Rochas ornamentais, materiais e manufatura avançada integrada: a base de cadeias produtivas já estruturadas."),
         ("04", "Tecnologia e formação", "Pesquisa, desenvolvimento tecnológico e formação profissional, com o IEL e o SENAI Ceará apoiando novas instalações."),
     ],
-    "stat_big": "R$ 185",
-    "stat_unit": " bi",
-    "stat_cap": "investimentos previstos 2026–2030",
-    "stat_eyebrow": "As oportunidades do Polo do Pecém",
-    "stat_p": "Hidrogênio verde, data centers, eólica e solar, terminais de GNL/GLP, Ferrovia Transnordestina e siderurgia: mais de R$ 185 bilhões em investimentos previstos para 2026–2030. Um ciclo de desenvolvimento que está procurando fornecedores, tecnologia e parceiros industriais.",
+    "pecem_eyebrow": "Pecém 2031 — Hub global de energia e tecnologia",
+    "pecem_h3": "Liderança mundial na transição energética",
+    "pecem_stats": [
+        ("11 GW", "hidrogênio verde"),
+        ("R$ 585 bi", "investimentos"),
+        ("42.000", "novos empregos"),
+    ],
+    "pecem_p": "Um estudo com a participação de Harvard e do MIT projeta o Pecém como referência mundial em energia limpa e inovação. O alinhamento entre políticas públicas e infraestrutura logística atrai investimentos de gigantes como TikTok e Casa dos Ventos.",
+    "pecem_pillars_lbl": "Os pilares da transformação",
+    "pecem_pillars": [
+        ("Data centers em larga escala", "Infraestrutura para a economia digital global."),
+        ("Indústria de alta tecnologia", "Atração de empresas de alto consumo elétrico."),
+        ("ZPE Ceará", "Incentivos fiscais e segurança jurídica para a exportação."),
+    ],
 
     # ---- setores ----
     "sect_eyebrow": "Setores da missão",
@@ -99,7 +108,6 @@ PT = {
         ("⚙", "Máquinas e equipamentos", "Mecânica, automação e equipamentos industriais."),
         ("❋", "Agroalimentar", "Cadeias agroindustriais e processamento de alimentos."),
         ("◈", "Tecnologias digitais", "Inovação digital e transformação tecnológica."),
-        ("▲", "Manufatura avançada", "Produção de alto valor, materiais e processos avançados."),
     ],
     "sect_callout": "<strong>Foco especial.</strong> Uma trilha dedicada às cadeias de <strong>design, mobiliário, rochas ornamentais, superfícies, materiais, interiores e arquitetura</strong>, apresentadas por meio do Rinascimento Design District.",
 
@@ -110,7 +118,7 @@ PT = {
     "values": [
         ("1", "Uma agenda sob medida", "As reuniões são definidas a partir do perfil da empresa, em articulação com os sindicatos industriais da FIEC: você conversa com contrapartes pertinentes, não com uma plateia genérica."),
         ("2", "Acesso direto às instituições", "Governo do Estado, FIEC, Câmara Ítalo-Brasileira e Sistema Italia participam da missão: interlocutores que decidem, na mesma sala."),
-        ("3", "Visitas técnicas, não turísticas", "Porto do Pecém, ZPE Ceará e infraestrutura industrial são visitados para avaliar custo, prazo e viabilidade de uma instalação ou de um fornecimento."),
+        ("3", "Visitas técnicas", "Porto do Pecém, ZPE Ceará e infraestrutura industrial são visitados para avaliar custo, prazo e viabilidade de uma instalação ou de um fornecimento."),
         ("4", "Uma plataforma já mapeada", "O Rinascimento Design District oferece um caminho de entrada já estruturado para quem avalia produção, showroom ou distribuição no Brasil."),
     ],
     "aud_eyebrow": "Para quem é",

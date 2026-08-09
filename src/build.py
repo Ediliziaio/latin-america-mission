@@ -409,15 +409,13 @@ def render(t, css, js):
     </div>
     <div class="why-grid reveal">{why_cells}</div>
     <div class="img-duo reveal">{ceara_porto}{ceara_industria}</div>
-    <div class="stat-banner reveal">
-      <div class="stat-fig">
-        <p class="big">{stat_big}<span>{stat_unit}</span></p>
-        <p class="cap">{stat_cap}</p>
-      </div>
-      <div>
-        <p class="eyebrow on-dark">{stat_eyebrow}</p>
-        <p style="margin-top:12px">{stat_p}</p>
-      </div>
+    <div class="pecem reveal">
+      <p class="eyebrow on-dark">{pecem_eyebrow}</p>
+      <h3>{pecem_h3}</h3>
+      <div class="pecem-stats">{pecem_stats}</div>
+      <p class="pecem-lede">{pecem_p}</p>
+      <p class="pecem-lbl">{pecem_pillars_lbl}</p>
+      <div class="pecem-pillars">{pecem_pillars}</div>
     </div>
   </div>
 </section>
@@ -724,8 +722,14 @@ def render(t, css, js):
         fsk=t["fact_support_k"], fsv=t["fact_support_v"],
         fok=t["fact_open_k"], fov=t["fact_open_v"],
         why_eyebrow=t["why_eyebrow"], why_h2=t["why_h2"], why_lede=t["why_lede"],
-        why_cells=why_cells, stat_big=t["stat_big"], stat_unit=t["stat_unit"],
-        stat_cap=t["stat_cap"], stat_eyebrow=t["stat_eyebrow"], stat_p=t["stat_p"],
+        why_cells=why_cells,
+        pecem_eyebrow=t["pecem_eyebrow"], pecem_h3=t["pecem_h3"],
+        pecem_stats="".join(
+            '<div><span class="big">{}</span><span class="cap">{}</span></div>'.format(v, c)
+            for v, c in t["pecem_stats"]),
+        pecem_p=t["pecem_p"], pecem_pillars_lbl=t["pecem_pillars_lbl"],
+        pecem_pillars="".join(
+            "<div><h4>{}</h4><p>{}</p></div>".format(h, d) for h, d in t["pecem_pillars"]),
         sect_eyebrow=t["sect_eyebrow"], sect_h2=t["sect_h2"], sect_lede=t["sect_lede"],
         sectors=sectors, sect_callout=t["sect_callout"],
         val_eyebrow=t["val_eyebrow"], val_h2=t["val_h2"], val_lede=t["val_lede"],

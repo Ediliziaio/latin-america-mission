@@ -61,7 +61,7 @@ IMAGES = {
     "hero": {
         "file": "hero-ceara.jpg", "w": 2400, "h": 1350, "silent": True,
         "responsive": [1200, 1600],
-        "label_it": "Sfondo hero — vista del Ceará o del Porto del Pecém",
+        "label_it": "Sfondo hero — vista del Ceará o del Porto di Pecém",
         "label_en": "Hero background — view of Ceará or the Port of Pecém",
         "alt_it": "Skyline di Fortaleza al tramonto, Stato del Ceará, Brasile",
         "alt_en": "Skyline of Fortaleza at sunset, State of Ceará, Brazil",
@@ -77,12 +77,12 @@ IMAGES = {
     },
     "ceara_porto": {
         "file": "ceara-porto-pecem.jpg", "w": 1200, "h": 900,
-        "label_it": "Porto del Pecém — banchine, terminal o vista aerea",
+        "label_it": "Porto di Pecém — banchine, terminal o vista aerea",
         "label_en": "Port of Pecém — docks, terminal or aerial view",
-        "alt_it": "Porto del Pecém, hub logistico e portuale dello Stato del Ceará",
+        "alt_it": "Porto di Pecém, hub logistico e portuale dello Stato del Ceará",
         "alt_en": "Port of Pecém, the logistics and port hub of the State of Ceará",
-        "cap_it": "Porto del Pecém e ZPE Ceará",
-        "cap_en": "Port of Pecém and Ceará EPZ",
+        "cap_it": "Porto di Pecém e FTZ Ceará",
+        "cap_en": "Port of Pecém and FTZ Ceará",
     },
     "ceara_industria": {
         "file": "ceara-industria.jpg", "w": 1200, "h": 900,
@@ -167,7 +167,7 @@ IT = {
 
     # ---- SEO ----
     "title": "Latin America Mission 2026 | Missione d'impresa in Ceará, Brasile",
-    "meta_desc": "Missione imprenditoriale italiana in Ceará, Brasile, dal 16 al 23 novembre 2026: incontri B2B, visite al Porto del Pecém e Rinascimento Design District.",
+    "meta_desc": "Missione imprenditoriale italiana in Ceará, Brasile, dal 16 al 23 novembre 2026: incontri B2B, visite al Porto di Pecém e Rinascimento Design District.",
     "og_title": "Latin America Mission 2026 — Ceará, Brasile | 16–23 novembre",
     "og_desc": "Una settimana di incontri B2B, visite industriali e relazioni istituzionali tra imprese italiane e il sistema produttivo del Ceará. Adesioni aperte.",
     "locale": "it_IT",
@@ -193,7 +193,7 @@ IT = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasile",
     "hero_dates": "16 – 23 novembre 2026",
-    "hero_sub": "Otto giorni per aprire una rotta industriale concreta tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto del Pecém e alla ZPE, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
+    "hero_sub": "Otto giorni per aprire una rotta industriale concreta tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto di Pecém e alla FTZ, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
     "hero_cta_1": "Invia la tua adesione",
     "hero_cta_2": "Scopri la missione",
     "hero_meta": [
@@ -235,16 +235,28 @@ IT = {
     "why_h2": "Uno Stato che tiene insieme tutta la catena del valore",
     "why_lede": "Materie prime, logistica portuale, energia rinnovabile, tecnologia e manifattura in un solo territorio. È questo che rende il Ceará una piattaforma di ingresso ai mercati dell'America Latina, e non semplicemente una destinazione.",
     "why_cells": [
-        ("01", "Logistica e Porto del Pecém", "Hub logistico e portuale di livello internazionale, con la ZPE Ceará e un collegamento diretto verso Europa, Stati Uniti e Africa."),
+        ("01", "Logistica e Porto di Pecém", "Hub logistico e portuale di livello internazionale, con la FTZ Ceará e un collegamento diretto verso Europa, Stati Uniti e Africa."),
         ("02", "Energia e transizione", "Polo di riferimento per l'idrogeno verde, l'eolico e il solare: energia rinnovabile competitiva, priorità dichiarata dello Stato."),
         ("03", "Materie prime e manifattura", "Pietre naturali, materiali e manifattura avanzata integrata: la base di filiere competitive già strutturate."),
         ("04", "Tecnologia e formazione", "Ricerca, sviluppo tecnologico e formazione professionale con IEL e SENAI Ceará a supporto degli insediamenti."),
     ],
-    "stat_big": "R$ 185",
-    "stat_unit": " mld",
-    "stat_cap": "investimenti previsti 2026–2030",
-    "stat_eyebrow": "Le opportunità del Polo del Pecém",
-    "stat_p": "Idrogeno verde, data center, eolico e solare, terminal GNL/GPL, ferrovia Transnordestina e siderurgia: oltre 185 miliardi di real di investimenti previsti nel periodo 2026–2030. Un ciclo di sviluppo che sta cercando fornitori, tecnologia e partner industriali.",
+    # Fonte: scheda "PECÉM 2031 — Hub globale di energia e tecnologia" fornita
+    # dallo Studio (9/8/2026). NB: nel messaggio erano indicati 571 mld, la scheda
+    # riporta R$ 585 bi — qui vale la scheda.
+    "pecem_eyebrow": "Pecém 2031 — Hub globale di energia e tecnologia",
+    "pecem_h3": "Leadership mondiale nella transizione energetica",
+    "pecem_stats": [
+        ("11 GW", "idrogeno verde"),
+        ("R$ 585 mld", "investimenti"),
+        ("42.000", "nuovi posti di lavoro"),
+    ],
+    "pecem_p": "Uno studio con la partecipazione di Harvard e del MIT proietta Pecém come riferimento mondiale per energia pulita e innovazione. L'allineamento tra politiche pubbliche e infrastruttura logistica sta attirando investimenti di giganti come TikTok e Casa dos Ventos.",
+    "pecem_pillars_lbl": "I pilastri della trasformazione",
+    "pecem_pillars": [
+        ("Data center su larga scala", "Infrastruttura per l'economia digitale globale."),
+        ("Industria ad alta tecnologia", "Attrazione di aziende ad alto consumo elettrico."),
+        ("FTZ Ceará", "Incentivi fiscali e sicurezza giuridica per l'esportazione."),
+    ],
 
     # ---- sectors ----
     "sect_eyebrow": "Settori della missione",
@@ -252,11 +264,10 @@ IT = {
     "sect_lede": "La missione resta aperta e trasversale: accanto al focus su design e materiali, il Ceará offre oggi opportunità concrete a logistica, energia, macchinari, tecnologia, agroalimentare e manifattura avanzata.",
     "sectors": [
         ("↗", "Energia e transizione energetica", "Generazione, rinnovabili e nuove filiere dell'energia pulita."),
-        ("⚓", "Logistica e infrastrutture", "Porto del Pecém, ZPE e reti logistiche integrate."),
+        ("⚓", "Logistica e infrastrutture", "Porto di Pecém, FTZ e reti logistiche integrate."),
         ("⚙", "Macchinari e impiantistica", "Meccanica, automazione ed equipaggiamenti industriali."),
         ("❋", "Agroalimentare", "Filiere agroindustriali e trasformazione alimentare."),
         ("◈", "Tecnologie digitali", "Innovazione digitale e trasformazione tecnologica."),
-        ("▲", "Manifattura avanzata", "Produzione ad alto valore, materiali e processi evoluti."),
     ],
     "sect_callout": "<strong>Focus speciale.</strong> Una corsia dedicata alle filiere del <strong>design, arredamento, pietre naturali, superfici, materiali, interni e architettura</strong>, presentate attraverso il Rinascimento Design District.",
 
@@ -267,7 +278,7 @@ IT = {
     "values": [
         ("1", "Un'agenda B2B costruita su misura", "Gli incontri vengono definiti a partire dal profilo dell'impresa, in raccordo con i sindacati industriali della FIEC: si parla con controparti pertinenti, non con una platea generica."),
         ("2", "Accesso diretto alle istituzioni", "Governo dello Stato, FIEC, Camera Italo-Brasiliana e Sistema Italia partecipano alla missione: interlocutori decisionali, nella stessa stanza."),
-        ("3", "Visite tecniche, non turistiche", "Porto del Pecém, ZPE Ceará e infrastrutture industriali si visitano per valutare costi, tempi e fattibilità di un insediamento o di una fornitura."),
+        ("3", "Visite tecniche", "Porto di Pecém, FTZ Ceará e infrastrutture industriali si visitano per valutare costi, tempi e fattibilità di un insediamento o di una fornitura."),
         ("4", "Una piattaforma già mappata", "Il Rinascimento Design District offre un percorso di ingresso già strutturato per chi valuta produzione, showroom o distribuzione in Brasile."),
     ],
     "aud_eyebrow": "A chi si rivolge",
@@ -321,7 +332,7 @@ IT = {
     "prog_lede": "Una settimana di incontri, visite e relazioni istituzionali costruita per produrre risultati verificabili al rientro.",
     "programme": [
         ("01", "Incontri B2B", "Con imprese, associazioni industriali e partner locali dei settori focus della missione, selezionati sul profilo di ciascun partecipante."),
-        ("02", "Visite istituzionali e tecniche", "Al Porto del Pecém, alla ZPE Ceará e alle principali infrastrutture logistiche e industriali del territorio."),
+        ("02", "Visite istituzionali e tecniche", "Al Porto di Pecém, alla FTZ Ceará e alle principali infrastrutture logistiche e industriali del territorio."),
         ("03", "Presentazione del Rinascimento", "Il Rinascimento Design District, il suo modello di sviluppo e le opportunità di collaborazione, internazionalizzazione e insediamento produttivo."),
         ("04", "Networking istituzionale", "Momenti di relazione tra imprenditori italiani, istituzioni brasiliane e stakeholder locali."),
     ],
@@ -378,7 +389,7 @@ IT = {
     "form_p": "Compila il modulo per manifestare il tuo interesse. Il team dello Studio Armando Rossi &amp; Partners ti ricontatta con il programma dettagliato, i costi di partecipazione e i prossimi passi. Nessun impegno in questa fase.",
     "form_perks": [
         "Agenda personalizzata di incontri B2B con imprese e partner locali",
-        "Accesso alle visite istituzionali e tecniche (Porto del Pecém, ZPE Ceará)",
+        "Accesso alle visite istituzionali e tecniche (Porto di Pecém, FTZ Ceará)",
         "Presentazione del Rinascimento Design District",
         "Networking con istituzioni e stakeholder brasiliani",
     ],
@@ -500,7 +511,7 @@ EN = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brazil",
     "hero_dates": "16 – 23 November 2026",
-    "hero_sub": "Eight days to open a concrete industrial route between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the EPZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
+    "hero_sub": "Eight days to open a concrete industrial route between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the FTZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
     "hero_cta_1": "Submit your application",
     "hero_cta_2": "Discover the mission",
     "hero_meta": [
@@ -539,27 +550,35 @@ EN = {
     "why_h2": "A state that holds the entire value chain together",
     "why_lede": "Raw materials, port logistics, renewable energy, technology and manufacturing in a single territory. That is what makes Ceará a gateway platform to the Latin American markets, rather than simply a destination.",
     "why_cells": [
-        ("01", "Logistics and the Port of Pecém", "A world-class logistics and port hub, with the Ceará EPZ and direct connections to Europe, the United States and Africa."),
+        ("01", "Logistics and the Port of Pecém", "A world-class logistics and port hub, with the FTZ Ceará and direct connections to Europe, the United States and Africa."),
         ("02", "Energy and transition", "A reference hub for green hydrogen, wind and solar: competitive renewable energy, a declared priority of the state."),
         ("03", "Raw materials and manufacturing", "Natural stone, materials and integrated advanced manufacturing: the basis of already structured, competitive supply chains."),
         ("04", "Technology and training", "Research, technological development and vocational training, with IEL and SENAI Ceará supporting new industrial settlements."),
     ],
-    "stat_big": "R$ 185",
-    "stat_unit": " bn",
-    "stat_cap": "investments planned 2026–2030",
-    "stat_eyebrow": "Opportunities of the Pecém Hub",
-    "stat_p": "Green hydrogen, data centres, wind and solar, LNG/LPG terminals, the Transnordestina railway and steelmaking: over 185 billion reais of investment planned for 2026–2030. A development cycle actively looking for suppliers, technology and industrial partners.",
+    "pecem_eyebrow": "Pecém 2031 — Global energy and technology hub",
+    "pecem_h3": "World leadership in the energy transition",
+    "pecem_stats": [
+        ("11 GW", "green hydrogen"),
+        ("R$ 585 bn", "investment"),
+        ("42,000", "new jobs"),
+    ],
+    "pecem_p": "A study involving Harvard and MIT projects Pecém as a global reference for clean energy and innovation. The alignment between public policy and logistics infrastructure is attracting investment from majors such as TikTok and Casa dos Ventos.",
+    "pecem_pillars_lbl": "The pillars of the transformation",
+    "pecem_pillars": [
+        ("Large-scale data centres", "Infrastructure for the global digital economy."),
+        ("High-tech industry", "Attracting energy-intensive companies."),
+        ("FTZ Ceará", "Tax incentives and legal certainty for exports."),
+    ],
 
     "sect_eyebrow": "Mission sectors",
     "sect_h2": "A broad, multi-sector mission",
     "sect_lede": "The mission stays open and cross-sectoral: alongside the focus on design and materials, Ceará today offers concrete opportunities in logistics, energy, machinery, technology, agri-food and advanced manufacturing.",
     "sectors": [
         ("↗", "Energy and energy transition", "Generation, renewables and new clean-energy supply chains."),
-        ("⚓", "Logistics and infrastructure", "Port of Pecém, EPZ and integrated logistics networks."),
+        ("⚓", "Logistics and infrastructure", "Port of Pecém, FTZ and integrated logistics networks."),
         ("⚙", "Machinery and plant engineering", "Mechanics, automation and industrial equipment."),
         ("❋", "Agri-food", "Agro-industrial chains and food processing."),
         ("◈", "Digital technologies", "Digital innovation and technological transformation."),
-        ("▲", "Advanced manufacturing", "High-value production, advanced materials and processes."),
     ],
     "sect_callout": "<strong>Special focus.</strong> A dedicated track for the supply chains of <strong>design, furniture, natural stone, surfaces, materials, interiors and architecture</strong>, presented through the Rinascimento Design District.",
 
@@ -569,7 +588,7 @@ EN = {
     "values": [
         ("1", "A tailor-made B2B agenda", "Meetings are defined from your company profile, in coordination with FIEC's industrial unions: you talk to relevant counterparts, not to a generic audience."),
         ("2", "Direct access to institutions", "The State Government, FIEC, the Italian-Brazilian Chamber and Sistema Italia take part in the mission: decision-makers, in the same room."),
-        ("3", "Technical visits, not sightseeing", "The Port of Pecém, the Ceará EPZ and industrial infrastructure are visited to assess the cost, timing and feasibility of a settlement or supply agreement."),
+        ("3", "Technical visits", "The Port of Pecém, the FTZ Ceará and industrial infrastructure are visited to assess the cost, timing and feasibility of a settlement or supply agreement."),
         ("4", "A platform already mapped out", "The Rinascimento Design District offers a structured entry route for companies evaluating production, showrooms or distribution in Brazil."),
     ],
     "aud_eyebrow": "Who it is for",
@@ -621,7 +640,7 @@ EN = {
     "prog_lede": "A week of meetings, visits and institutional relations designed to produce results you can verify on your return.",
     "programme": [
         ("01", "B2B meetings", "With companies, industrial associations and local partners in the mission's focus sectors, selected on each participant's profile."),
-        ("02", "Institutional and technical visits", "To the Port of Pecém, the Ceará EPZ and the region's main logistics and industrial infrastructure."),
+        ("02", "Institutional and technical visits", "To the Port of Pecém, the FTZ Ceará and the region's main logistics and industrial infrastructure."),
         ("03", "Rinascimento presentation", "The Rinascimento Design District, its development model and the opportunities for collaboration, internationalisation and productive settlement."),
         ("04", "Institutional networking", "Moments of relationship-building between Italian entrepreneurs, Brazilian institutions and local stakeholders."),
     ],
@@ -675,7 +694,7 @@ EN = {
     "form_p": "Fill in the form to express your interest. The Studio Armando Rossi &amp; Partners team will get back to you with the detailed programme, participation costs and next steps. No commitment at this stage.",
     "form_perks": [
         "A tailored B2B meeting agenda with local companies and partners",
-        "Access to institutional and technical visits (Port of Pecém, Ceará EPZ)",
+        "Access to institutional and technical visits (Port of Pecém, FTZ Ceará)",
         "Presentation of the Rinascimento Design District",
         "Networking with Brazilian institutions and stakeholders",
     ],
