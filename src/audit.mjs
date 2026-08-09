@@ -15,6 +15,7 @@ fs.mkdirSync(OUT, { recursive: true });
 const PAGES = [
   { name: 'it', url: BASE + '/' },
   { name: 'en', url: BASE + '/en/' },
+  { name: 'pt', url: BASE + '/pt/' },
 ];
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 900 },

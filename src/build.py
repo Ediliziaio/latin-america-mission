@@ -143,14 +143,29 @@ def img(slot, t, cls="", eager=False, dark=False, sizes=None):
     spec = IMAGES[slot]
     w, h, f = spec["w"], spec["h"], spec["file"]
     if has_img(slot):
+        # varianti responsive: usate solo se il file esiste davvero
+        # (le genera src/make_variants.py, che e' opzionale)
+        srcset = ""
+        stem, ext = os.path.splitext(f)
+        widths = [
+            v for v in spec.get("responsive", [])
+            if os.path.exists(os.path.join(ROOT, "assets", "img",
+                                           "{}-{}{}".format(stem, v, ext)))
+        ]
+        if widths:
+            parts = ["{p}assets/img/{s}-{v}{e} {v}w".format(
+                p=t["_asset_prefix"], s=stem, v=v, e=ext) for v in widths]
+            parts.append("{p}assets/img/{f} {w}w".format(p=t["_asset_prefix"], f=f, w=w))
+            srcset = ' srcset="{}"'.format(", ".join(parts))
+            sizes = sizes or "100vw"
         return (
             '<img class="{cls}" src="{p}assets/img/{f}" width="{w}" height="{h}" '
-            'alt="{a}" {ld} decoding="async"{sz}>'
+            'alt="{a}" {ld} decoding="async"{ss}{sz}>'
         ).format(
             cls=cls, p=t["_asset_prefix"], f=f, w=w, h=h,
             a=spec.get("alt_" + t["lang"], ""),
             ld='fetchpriority="high"' if eager else 'loading="lazy"',
-            sz=' sizes="{}"'.format(sizes) if sizes else "",
+            ss=srcset, sz=' sizes="{}"'.format(sizes) if sizes else "",
         )
     if spec.get("silent"):
         return ""
@@ -204,18 +219,21 @@ def logos_html(t):
 def render(t, css, js):
     p = t["_asset_prefix"]
     canonical = BASE + t["path"]
-    alt_it = BASE + "/"
-    alt_en = BASE + "/en/"
+    hreflangs = "".join(
+        '<link rel="alternate" hreflang="{l}" href="{u}">'.format(l=o["lang"], u=BASE + o["path"])
+        for o in LANGS
+    ) + '<link rel="alternate" hreflang="x-default" href="{}/">'.format(BASE)
     nav_items, _ = nav_html(t, p)
 
-    def lang_item(code, href):
+    def lang_item(o):
+        code = o["lang"]
         if t["lang"] == code:
             return '<span aria-current="true">{}</span>'.format(code.upper())
-        return '<a href="{}" hreflang="{}" lang="{}">{}</a>'.format(href, code, code, code.upper())
+        return '<a href="{h}" hreflang="{c}" lang="{c}">{u}</a>'.format(
+            h=o["path"], c=code, u=code.upper())
 
-    lang_switch = (
-        '<div class="lang-switch" role="group" aria-label="{lbl}">{it}{en}</div>'
-    ).format(lbl=t["lang_label"], it=lang_item("it", "/"), en=lang_item("en", "/en/"))
+    lang_switch = '<div class="lang-switch" role="group" aria-label="{lbl}">{items}</div>'.format(
+        lbl=t["lang_label"], items="".join(lang_item(o) for o in LANGS))
 
     hero_meta = "".join(
         "<div>{}<strong>{}</strong></div>".format(k, v) for k, v in t["hero_meta"]
@@ -278,9 +296,7 @@ def render(t, css, js):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="it" href="{alt_it}">
-<link rel="alternate" hreflang="en" href="{alt_en}">
-<link rel="alternate" hreflang="x-default" href="{alt_it}">
+{hreflangs}
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="theme-color" content="#0a1729">
 <meta name="author" content="{promoter}">
@@ -325,7 +341,7 @@ def render(t, css, js):
 </header>
 """.format(
         lang=t["lang"], title=t["title"], desc=plain(t["meta_desc"]), canonical=canonical,
-        alt_it=alt_it, alt_en=alt_en, promoter=plain(SITE["promoter"]),
+        hreflangs=hreflangs, promoter=plain(SITE["promoter"]),
         locale=t["locale"], og_title=plain(t["og_title"]), og_desc=plain(t["og_desc"]),
         base=BASE, p=p, css=css, jsonld=build_jsonld(t), skip=t["skip"],
         nav_label=t["nav_aria"], nav_items=nav_items, lang_switch=lang_switch,
@@ -738,7 +754,7 @@ def render(t, css, js):
         f_message=t["f_message"], f_message_ph=t["f_message_ph"],
         f_privacy=t["f_privacy"], f_submit=t["f_submit"], f_note=t["f_note"],
         f_success_h3=t["f_success_h3"], f_success_p=t["f_success_p"],
-        country_default="Italia" if t["lang"] == "it" else "Italy",
+        country_default={"it": "Italia", "en": "Italy", "pt": "Itália"}[t["lang"]],
         ct_eyebrow=t["ct_eyebrow"], ct_h2=t["ct_h2"], ct_lede=t["ct_lede"],
         ct_email=t["ct_email"], ct_phone=t["ct_phone"], ct_promoter=t["ct_promoter"],
         foot_sub=t["foot_sub"], foot_p=t["foot_p"], foot_nav_h=t["foot_nav_h"],
@@ -774,7 +790,7 @@ def main():
         js_raw = f.read()
 
     for t in LANGS:
-        t["_asset_prefix"] = "" if t["lang"] == "it" else "../"
+        t["_asset_prefix"] = "" if t["path"] == "/" else "../"
         css = minify_css(css_raw.replace("/assets/", t["_asset_prefix"] + "assets/"))
         js = minify_js(
             js_raw
@@ -791,8 +807,8 @@ def main():
             .replace("__ICS_TITLE__", "Latin America Mission 2026 - Ceara, Brasile")
         )
         html = render(t, css, js)
-        out = os.path.join(ROOT, "index.html") if t["lang"] == "it" \
-            else os.path.join(ROOT, "en", "index.html")
+        out = (os.path.join(ROOT, "index.html") if t["path"] == "/"
+               else os.path.join(ROOT, t["path"].strip("/"), "index.html"))
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "w", encoding="utf-8") as f:
             f.write(html)
@@ -836,7 +852,7 @@ Sitemap: {base}/sitemap.xml
         ) + '<xhtml:link rel="alternate" hreflang="x-default" href="{}/"/>'.format(BASE)
         urls.append(
             "<url><loc>{}</loc>{}<changefreq>weekly</changefreq><priority>{}</priority></url>".format(
-                loc, alts, "1.0" if t["lang"] == "it" else "0.9")
+                loc, alts, "1.0" if t["path"] == "/" else "0.9")
         )
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -869,6 +885,7 @@ Sitemap: {base}/sitemap.xml
 ## Pagine
 - [Sito ufficiale (IT)]({base}/): programma, settori, partner, FAQ e modulo di adesione
 - [Official website (EN)]({base}/en/): programme, sectors, partners, FAQ and application form
+- [Site oficial (PT-BR)]({base}/pt/): programação, setores, parceiros, perguntas frequentes e formulário de inscrição
 
 ## Domande frequenti
 {faq}

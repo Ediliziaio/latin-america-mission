@@ -4,24 +4,27 @@ Sito ufficiale della missione imprenditoriale promossa dallo **Studio Armando Ro
 con la partecipazione di Italink e il supporto istituzionale del Governo dello Stato del Ceará,
 della FIEC, della Camera Italo-Brasiliana di Commercio e Industria e del Sistema Italia.
 
-HTML statico, zero dipendenze a runtime. Due pagine indipendenti (IT ed EN) generate da un
+HTML statico, zero dipendenze a runtime. Tre pagine indipendenti (IT, EN, PT-BR) generate da un
 unico sorgente di contenuti.
 
 ## Struttura
 
 ```
-index.html            pagina IT   (generata — non modificare a mano)
-en/index.html         pagina EN   (generata — non modificare a mano)
+index.html            pagina IT    (generata — non modificare a mano)
+en/index.html         pagina EN    (generata — non modificare a mano)
+pt/index.html         pagina PT-BR (generata — non modificare a mano)
 robots.txt sitemap.xml llms.txt 404.html   (generati)
 assets/
   fonts/              Inter Tight variable, subset latin + latin-ext, self-hosted
   img/                loghi istituzionali (WebP), favicon, immagine OG
 src/
-  content.py          TUTTI i testi, IT ed EN  ←  si modifica qui
+  content.py          testi IT ed EN + registro delle immagini  ←  si modifica qui
+  content_pt.py       testi PT-BR
   styles.css          design system
   site.js             header, menu, reveal, scrollspy, form
   build.py            generatore
   audit.mjs           audit automatico (Playwright)
+  make_variants.py    genera le varianti responsive (richiede Pillow, opzionale)
 ```
 
 ## Comandi
@@ -50,9 +53,10 @@ Esce con codice 1 se trova problemi. Gli screenshot finiscono in `.audit/`.
 
 ## Modificare i contenuti
 
-Tutti i testi stanno in [`src/content.py`](src/content.py), nei dizionari `IT` e `EN`.
-Le due lingue hanno la stessa struttura: se aggiungi una chiave in una, aggiungila anche
-nell'altra. Poi `python3 src/build.py`.
+I testi italiani e inglesi stanno in [`src/content.py`](src/content.py), nei dizionari `IT` e
+`EN`; il portoghese in [`src/content_pt.py`](src/content_pt.py). Le tre lingue hanno la stessa
+struttura: se aggiungi una chiave in una, aggiungila anche nelle altre — il build fallisce
+subito se una manca. Poi `python3 src/build.py`.
 
 Dati di sito (email, telefono, date, dominio) nel dizionario `SITE` in cima allo stesso file.
 
@@ -64,7 +68,7 @@ il codice: basta copiare l'immagine in `assets/img/` con il nome indicato e rila
 
 | Slot | File | Misura | Dove compare |
 |---|---|---|---|
-| `hero` | `hero-ceara.jpg` | 2400×1350 | sfondo del hero (opzionale: se manca resta il gradiente) |
+| `hero` | `hero-ceara.jpg` | 2400×1350 | sfondo del hero — **già presente** (skyline di Fortaleza al tramonto, foto Unsplash, licenza libera anche commerciale, `unsplash.com/photos/lWMkpyKglbs`) |
 | `mission_band` | `mission-band.jpg` | 1920×760 | fascia larga sotto "La missione" |
 | `ceara_porto` | `ceara-porto-pecem.jpg` | 1200×900 | coppia in "Perché il Ceará" |
 | `ceara_industria` | `ceara-industria.jpg` | 1200×900 | coppia in "Perché il Ceará" |
@@ -73,6 +77,10 @@ il codice: basta copiare l'immagine in `assets/img/` con il nome indicato e rila
 | `promoter` | `promoter.jpg` | 900×1100 | blocco "Chi guida la missione" |
 
 `python3 src/build.py` stampa a fine build l'elenco degli slot con lo stato (`ok` / `DA FORNIRE`).
+
+Uno slot può dichiarare `"responsive": [1200, 1600]`: in quel caso `python3 src/make_variants.py`
+genera le versioni ridotte e la build emette un `srcset`, così il mobile scarica l'immagine
+piccola. È così per il hero: 114 kB su mobile invece di 256.
 
 Le didascalie, i testi alternativi e le descrizioni dei segnaposto stanno nel dizionario
 `IMAGES` in [`src/content.py`](src/content.py). Le immagini della galleria sono cliccabili e si
@@ -102,20 +110,22 @@ desktop, lightbox della galleria, scrollspy in navigazione, menu mobile.
 ## Performance
 
 Il CSS e il JS sono **inlinati** nelle pagine: nessuna richiesta bloccante in render.
-Peso totale per pagina ~132 kB, 5 richieste, di cui 3 loghi in lazy-load. Le immagini che
+Peso totale ~246 kB su mobile e ~309 kB su desktop, 6 richieste (la foto del hero pesa da
+sola più di tutto il resto). Le immagini che
 fornirai sono tutte in `loading="lazy"` con `width`/`height` dichiarati, quindi non causano
 salti di layout.
 
 ## SEO
 
-- Pagine separate per lingua con `hreflang` reciproci e `x-default` sull'italiano
+- Tre pagine separate per lingua con `hreflang` reciproci e `x-default` sull'italiano
 - Canonical, Open Graph, Twitter Card, immagine OG 1200×630 dedicata
 - JSON-LD: `Organization`, `BusinessEvent`, `FAQPage`, `WebPage`
 - `sitemap.xml` con alternate per lingua, `robots.txt` con crawler AI abilitati, `llms.txt` per GEO/AEO
 
 ## Da completare
 
-- [ ] Le 12 immagini degli slot (vedi *Zone immagine*)
+- [ ] Le 11 immagini degli slot ancora vuoti (vedi *Zone immagine*)
+- [ ] Far rileggere il portoghese a un madrelingua brasiliano prima del lancio
 - [ ] Endpoint del modulo di adesione (`SITE["form_endpoint"]`)
 - [ ] Verificare in FAQ costi, tempi di adesione e servizi inclusi: i testi attuali sono
       formulati in modo prudente e vanno confermati dallo Studio

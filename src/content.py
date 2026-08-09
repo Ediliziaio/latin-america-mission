@@ -24,18 +24,21 @@ LOGOS = [
         "w": 554, "h": 200,
         "alt_it": "Governo dello Stato del Ceará — Segreteria dello Sviluppo Economico",
         "alt_en": "Government of the State of Ceará — Secretariat of Economic Development",
+        "alt_pt": "Governo do Estado do Ceará — Secretaria do Desenvolvimento Econômico",
     },
     {
         "file": "fiec.webp",
         "w": 612, "h": 200,
         "alt_it": "FIEC — Federazione delle Industrie dello Stato del Ceará",
         "alt_en": "FIEC — Federation of Industries of the State of Ceará",
+        "alt_pt": "FIEC — Federação das Indústrias do Estado do Ceará",
     },
     {
         "file": "camara-italo-brasileira.webp",
         "w": 214, "h": 200,
         "alt_it": "Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro",
         "alt_en": "Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro",
+        "alt_pt": "Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro",
     },
 ]
 
@@ -50,11 +53,15 @@ LOGOS = [
 # rapporto giusto: rispettale per evitare tagli.
 IMAGES = {
     # sfondo del hero: se manca resta il gradiente blu notte (nessun segnaposto)
+    # Foto: Fortaleza al tramonto — Unsplash, licenza libera anche per uso
+    # commerciale, attribuzione non obbligatoria. unsplash.com/photos/lWMkpyKglbs
     "hero": {
         "file": "hero-ceara.jpg", "w": 2400, "h": 1350, "silent": True,
+        "responsive": [1200, 1600],
         "label_it": "Sfondo hero — vista del Ceará o del Porto del Pecém",
         "label_en": "Hero background — view of Ceará or the Port of Pecém",
-        "alt_it": "", "alt_en": "",
+        "alt_it": "Skyline di Fortaleza al tramonto, Stato del Ceará, Brasile",
+        "alt_en": "Skyline of Fortaleza at sunset, State of Ceará, Brazil",
     },
     "mission_band": {
         "file": "mission-band.jpg", "w": 1920, "h": 760,
@@ -753,4 +760,9 @@ EN = {
     "lang_label": "Language",
 }
 
-LANGS = [IT, EN]
+from content_pt import PT, IMAGES_PT  # noqa: E402
+
+for _slot, _extra in IMAGES_PT.items():
+    IMAGES[_slot].update(_extra)
+
+LANGS = [IT, EN, PT]
