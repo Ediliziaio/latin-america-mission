@@ -76,6 +76,96 @@
     spied.forEach(function (el) { spy.observe(el); });
   }
 
+  // ---------------------------------------------------------------- countdown
+  var heroMeta = document.getElementById('heroMeta');
+  if (heroMeta) {
+    var start = new Date('__START__T00:00:00');
+    var days = Math.ceil((start - new Date()) / 86400000);
+    var box = document.createElement('div');
+    box.className = 'count';
+    if (days > 0) {
+      box.innerHTML = '__COUNT_LABEL__<strong>' + days + ' __COUNT_UNIT__</strong>';
+    } else if (days > -8) {
+      box.innerHTML = '<strong>__COUNT_TODAY__</strong>';
+    }
+    if (box.innerHTML) heroMeta.appendChild(box);
+  }
+
+  // ---------------------------------------------------------------- add to calendar
+  var icsBtn = document.getElementById('icsBtn');
+  if (icsBtn) {
+    icsBtn.addEventListener('click', function () {
+      var pad = function (n) { return String(n).padStart(2, '0'); };
+      var d = function (s, add) {
+        var x = new Date(s + 'T00:00:00');
+        if (add) x.setDate(x.getDate() + add);
+        return x.getFullYear() + pad(x.getMonth() + 1) + pad(x.getDate());
+      };
+      var ics = [
+        'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Latin America Mission//IT',
+        'BEGIN:VEVENT',
+        'UID:latin-america-mission-2026@' + location.hostname,
+        'DTSTART;VALUE=DATE:' + d('__START__'),
+        'DTEND;VALUE=DATE:' + d('__END__', 1), // DTEND e' esclusivo
+        'SUMMARY:__ICS_TITLE__',
+        'LOCATION:Fortaleza, Ceara, Brasile',
+        'DESCRIPTION:' + location.origin + location.pathname,
+        'URL:' + location.origin + location.pathname,
+        'END:VEVENT', 'END:VCALENDAR'
+      ].join('\r\n');
+      var a = document.createElement('a');
+      a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+      a.download = 'latin-america-mission-2026.ics';
+      a.click();
+    });
+  }
+
+  // ---------------------------------------------------------------- sticky CTA + to top
+  var sticky = document.getElementById('stickyCta');
+  var toTop = document.getElementById('toTop');
+  var joinSection = document.getElementById('adesioni');
+  function onScroll2() {
+    var past = window.scrollY > window.innerHeight * 0.9;
+    if (sticky) {
+      // nascosta quando si e' gia' sul modulo di adesione
+      var onForm = joinSection &&
+        joinSection.getBoundingClientRect().top < window.innerHeight &&
+        joinSection.getBoundingClientRect().bottom > 0;
+      var show = past && !onForm;
+      sticky.hidden = false;
+      sticky.classList.toggle('in', show);
+    }
+    if (toTop) {
+      toTop.hidden = false;
+      toTop.classList.toggle('in', window.scrollY > window.innerHeight * 1.5);
+    }
+  }
+  onScroll2();
+  window.addEventListener('scroll', onScroll2, { passive: true });
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ---------------------------------------------------------------- lightbox galleria
+  var lb = document.getElementById('lightbox');
+  if (lb && typeof lb.showModal === 'function') {
+    var lbImg = document.getElementById('lbImg');
+    var lbCap = document.getElementById('lbCap');
+    document.querySelectorAll('.gal-item img').forEach(function (im) {
+      im.addEventListener('click', function () {
+        lbImg.src = im.currentSrc || im.src;
+        lbImg.alt = im.alt;
+        var cap = im.parentElement.querySelector('figcaption');
+        lbCap.textContent = cap ? cap.textContent : '';
+        lb.showModal();
+      });
+    });
+    document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+  }
+
   // ---------------------------------------------------------------- form
   var form = document.getElementById('joinForm');
   if (!form) return;

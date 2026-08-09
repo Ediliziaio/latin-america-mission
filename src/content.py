@@ -39,6 +39,115 @@ LOGOS = [
     },
 ]
 
+# ---------------------------------------------------------------------------
+# ZONE IMMAGINE
+# ---------------------------------------------------------------------------
+# Ogni voce e' uno slot del sito. Se il file esiste in assets/img/ viene usato;
+# se manca, al suo posto compare un segnaposto che indica misura e nome file da
+# fornire. Basta copiare l'immagine con quel nome ed eseguire python3 src/build.py.
+#
+# Formato consigliato: JPG (foto) o WebP. Le misure sono in pixel, gia' al
+# rapporto giusto: rispettale per evitare tagli.
+IMAGES = {
+    # sfondo del hero: se manca resta il gradiente blu notte (nessun segnaposto)
+    "hero": {
+        "file": "hero-ceara.jpg", "w": 2400, "h": 1350, "silent": True,
+        "label_it": "Sfondo hero — vista del Ceará o del Porto del Pecém",
+        "label_en": "Hero background — view of Ceará or the Port of Pecém",
+        "alt_it": "", "alt_en": "",
+    },
+    "mission_band": {
+        "file": "mission-band.jpg", "w": 1920, "h": 760,
+        "label_it": "Fascia missione — delegazione, tavolo istituzionale o skyline di Fortaleza",
+        "label_en": "Mission band — delegation, institutional meeting or Fortaleza skyline",
+        "alt_it": "Delegazione italiana in visita istituzionale nello Stato del Ceará",
+        "alt_en": "Italian delegation on an institutional visit in the State of Ceará",
+        "cap_it": "La missione riunisce imprese italiane, istituzioni brasiliane e sistema industriale del Ceará.",
+        "cap_en": "The mission brings together Italian companies, Brazilian institutions and the industrial system of Ceará.",
+    },
+    "ceara_porto": {
+        "file": "ceara-porto-pecem.jpg", "w": 1200, "h": 900,
+        "label_it": "Porto del Pecém — banchine, terminal o vista aerea",
+        "label_en": "Port of Pecém — docks, terminal or aerial view",
+        "alt_it": "Porto del Pecém, hub logistico e portuale dello Stato del Ceará",
+        "alt_en": "Port of Pecém, the logistics and port hub of the State of Ceará",
+        "cap_it": "Porto del Pecém e ZPE Ceará",
+        "cap_en": "Port of Pecém and Ceará EPZ",
+    },
+    "ceara_industria": {
+        "file": "ceara-industria.jpg", "w": 1200, "h": 900,
+        "label_it": "Industria — impianto, cava di pietra naturale o parco eolico",
+        "label_en": "Industry — plant, natural stone quarry or wind farm",
+        "alt_it": "Impianto industriale nello Stato del Ceará",
+        "alt_en": "Industrial plant in the State of Ceará",
+        "cap_it": "Manifattura ed energia rinnovabile",
+        "cap_en": "Manufacturing and renewable energy",
+    },
+    "rinascimento": {
+        "file": "rinascimento-district.jpg", "w": 1200, "h": 1000,
+        "label_it": "Rinascimento Design District — render, masterplan o materiali",
+        "label_en": "Rinascimento Design District — render, masterplan or materials",
+        "alt_it": "Rinascimento Design District, ecosistema industriale del design nel Ceará",
+        "alt_en": "Rinascimento Design District, the design industrial ecosystem in Ceará",
+    },
+    "gallery_1": {
+        "file": "gallery-1.jpg", "w": 1200, "h": 900,
+        "label_it": "Fortaleza — skyline o waterfront",
+        "label_en": "Fortaleza — skyline or waterfront",
+        "alt_it": "Skyline di Fortaleza, capitale dello Stato del Ceará",
+        "alt_en": "Skyline of Fortaleza, capital of the State of Ceará",
+        "cap_it": "Fortaleza", "cap_en": "Fortaleza",
+    },
+    "gallery_2": {
+        "file": "gallery-2.jpg", "w": 1200, "h": 900,
+        "label_it": "Incontri B2B — tavolo di lavoro con imprese",
+        "label_en": "B2B meetings — working table with companies",
+        "alt_it": "Incontri B2B tra imprese italiane e partner brasiliani",
+        "alt_en": "B2B meetings between Italian companies and Brazilian partners",
+        "cap_it": "Incontri B2B", "cap_en": "B2B meetings",
+    },
+    "gallery_3": {
+        "file": "gallery-3.jpg", "w": 1200, "h": 900,
+        "label_it": "Pietre naturali — cava, blocchi o lastre lavorate",
+        "label_en": "Natural stone — quarry, blocks or finished slabs",
+        "alt_it": "Lavorazione di pietre naturali nello Stato del Ceará",
+        "alt_en": "Natural stone processing in the State of Ceará",
+        "cap_it": "Pietre naturali e superfici", "cap_en": "Natural stone and surfaces",
+    },
+    "gallery_4": {
+        "file": "gallery-4.jpg", "w": 1200, "h": 900,
+        "label_it": "Energia — parco eolico, solare o idrogeno verde",
+        "label_en": "Energy — wind farm, solar or green hydrogen",
+        "alt_it": "Parco eolico nello Stato del Ceará",
+        "alt_en": "Wind farm in the State of Ceará",
+        "cap_it": "Energia e transizione", "cap_en": "Energy and transition",
+    },
+    "gallery_5": {
+        "file": "gallery-5.jpg", "w": 1200, "h": 900,
+        "label_it": "Visita istituzionale — firma accordo o incontro con il Governo",
+        "label_en": "Institutional visit — agreement signing or meeting with the Government",
+        "alt_it": "Incontro istituzionale con il Governo dello Stato del Ceará",
+        "alt_en": "Institutional meeting with the Government of the State of Ceará",
+        "cap_it": "Tavoli istituzionali", "cap_en": "Institutional roundtables",
+    },
+    "gallery_6": {
+        "file": "gallery-6.jpg", "w": 1200, "h": 900,
+        "label_it": "Design e arredamento — showroom, prodotto o materiali",
+        "label_en": "Design and furniture — showroom, product or materials",
+        "alt_it": "Showroom di design e arredamento",
+        "alt_en": "Design and furniture showroom",
+        "cap_it": "Design e arredamento", "cap_en": "Design and furniture",
+    },
+    "promoter": {
+        "file": "promoter.jpg", "w": 900, "h": 1100,
+        "label_it": "Ritratto — Avv. Armando Rossi o team dello Studio",
+        "label_en": "Portrait — Armando Rossi or the firm's team",
+        "alt_it": "Avv. Armando Rossi, promotore della Latin America Mission",
+        "alt_en": "Armando Rossi, promoter of the Latin America Mission",
+    },
+}
+
+
 IT = {
     "lang": "it",
     "path": "/",
@@ -304,6 +413,32 @@ IT = {
     "f_success_h3": "Adesione ricevuta. Grazie.",
     "f_success_p": "Il team dello Studio Armando Rossi &amp; Partners ti ricontatta a breve con il programma dettagliato e i prossimi passi.",
     "f_mail_subject": "Adesione — Latin America Mission 2026",
+
+    # ---- galleria ----
+    "gal_eyebrow": "Il Ceará in immagini",
+    "gal_h2": "Il territorio, le filiere, gli incontri",
+    "gal_lede": "Le infrastrutture, le filiere industriali e i momenti di lavoro che compongono la missione.",
+
+    # ---- promotore ----
+    "prom_eyebrow": "Chi guida la missione",
+    "prom_h2": "Studio Armando Rossi & Partners",
+    "prom_role": "Promotore della Latin America Mission",
+    "prom_p": [
+        "Lo Studio Armando Rossi &amp; Partners promuove la Latin America Mission e cura i rapporti con le istituzioni brasiliane, la selezione delle controparti e l'assistenza alle imprese partecipanti prima, durante e dopo la missione.",
+        "Per informazioni sul programma, sui costi e sui requisiti di partecipazione, la segreteria risponde direttamente ai contatti in fondo alla pagina.",
+    ],
+    "prom_cta": "Parla con la segreteria",
+
+    # ---- micro-interazioni ----
+    "countdown_label": "Alla partenza",
+    "countdown_unit": "giorni",
+    "countdown_today": "La missione è in corso",
+    "ics_label": "Aggiungi al calendario",
+    "sticky_cta": "Aderisci alla missione",
+    "sticky_dates": "16–23 nov 2026 · posti limitati",
+    "top_label": "Torna su",
+    "close_label": "Chiudi",
+    "zoom_label": "Ingrandisci l'immagine",
 
     # ---- contacts ----
     "ct_eyebrow": "Contatti",
@@ -575,6 +710,32 @@ EN = {
     "f_success_h3": "Application received. Thank you.",
     "f_success_p": "The Studio Armando Rossi &amp; Partners team will contact you shortly with the detailed programme and next steps.",
     "f_mail_subject": "Application — Latin America Mission 2026",
+
+    # ---- gallery ----
+    "gal_eyebrow": "Ceará in pictures",
+    "gal_h2": "The territory, the supply chains, the meetings",
+    "gal_lede": "The infrastructure, the industrial supply chains and the working moments that make up the mission.",
+
+    # ---- promoter ----
+    "prom_eyebrow": "Who leads the mission",
+    "prom_h2": "Studio Armando Rossi & Partners",
+    "prom_role": "Promoter of the Latin America Mission",
+    "prom_p": [
+        "Studio Armando Rossi &amp; Partners promotes the Latin America Mission and manages relations with the Brazilian institutions, the selection of counterparts and support to participating companies before, during and after the mission.",
+        "For information on the programme, costs and participation requirements, the secretariat replies directly at the contacts at the bottom of this page.",
+    ],
+    "prom_cta": "Talk to the secretariat",
+
+    # ---- micro-interactions ----
+    "countdown_label": "To departure",
+    "countdown_unit": "days",
+    "countdown_today": "The mission is under way",
+    "ics_label": "Add to calendar",
+    "sticky_cta": "Apply to the mission",
+    "sticky_dates": "16–23 Nov 2026 · limited places",
+    "top_label": "Back to top",
+    "close_label": "Close",
+    "zoom_label": "Enlarge image",
 
     "ct_eyebrow": "Contacts",
     "ct_h2": "Information and participation",

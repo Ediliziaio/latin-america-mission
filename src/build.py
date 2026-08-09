@@ -15,7 +15,7 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from content import SITE, LOGOS, LANGS  # noqa: E402
+from content import SITE, LOGOS, IMAGES, LANGS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
@@ -120,6 +120,60 @@ def build_jsonld(t):
     return json.dumps({"@context": "https://schema.org",
                        "@graph": [org, event, faq, page]},
                       ensure_ascii=False, separators=(",", ":"))
+
+
+# --------------------------------------------------------------------------- immagini
+IMG_STATUS = {}
+
+
+def has_img(slot):
+    """True se il file dello slot esiste davvero in assets/img/."""
+    spec = IMAGES[slot]
+    ok = os.path.exists(os.path.join(ROOT, "assets", "img", spec["file"]))
+    IMG_STATUS[slot] = ok
+    return ok
+
+
+def img(slot, t, cls="", eager=False, dark=False, sizes=None):
+    """Rende l'immagine dello slot, o un segnaposto che dice cosa fornire.
+
+    Gli slot marcati "silent" non producono segnaposto: se il file manca
+    semplicemente non rendono nulla (usato per lo sfondo del hero).
+    """
+    spec = IMAGES[slot]
+    w, h, f = spec["w"], spec["h"], spec["file"]
+    if has_img(slot):
+        return (
+            '<img class="{cls}" src="{p}assets/img/{f}" width="{w}" height="{h}" '
+            'alt="{a}" {ld} decoding="async"{sz}>'
+        ).format(
+            cls=cls, p=t["_asset_prefix"], f=f, w=w, h=h,
+            a=spec.get("alt_" + t["lang"], ""),
+            ld='fetchpriority="high"' if eager else 'loading="lazy"',
+            sz=' sizes="{}"'.format(sizes) if sizes else "",
+        )
+    if spec.get("silent"):
+        return ""
+    return (
+        '<div class="img-ph{dk} {cls}" style="aspect-ratio:{w}/{h}">'
+        '<span class="ph-ic" aria-hidden="true"></span>'
+        '<span class="ph-lbl">{lbl}</span>'
+        '<span class="ph-spec">{w}&#215;{h} px &middot; assets/img/{f}</span>'
+        "</div>"
+    ).format(dk=" on-dark" if dark else "", cls=cls, w=w, h=h,
+             lbl=spec["label_" + t["lang"]], f=f)
+
+
+def figure(slot, t, cls="", dark=False, eager=False):
+    """Immagine con didascalia, se lo slot ne ha una."""
+    cap = IMAGES[slot].get("cap_" + t["lang"])
+    inner = img(slot, t, eager=eager, dark=dark)
+    if not inner:
+        return ""
+    if not cap:
+        return '<div class="{}">{}</div>'.format(cls, inner) if cls else inner
+    return '<figure class="{c}">{i}<figcaption>{cap}</figcaption></figure>'.format(
+        c=cls, i=inner, cap=cap)
 
 
 # --------------------------------------------------------------------------- partials
@@ -283,17 +337,19 @@ def render(t, css, js):
 
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-photo" aria-hidden="true">{hero_img}</div>
   <div class="wrap">
     <p class="hero-flag"><span class="dot" aria-hidden="true"></span><span>{hero_flag}</span></p>
     <h1>{h1a} <span class="accent">{h1b}</span></h1>
     <p class="hero-place">{place}</p>
     <p class="hero-dates"><span class="sep" aria-hidden="true"></span><time datetime="{start}/{end}">{dates}</time></p>
+    <p class="hero-ics"><button type="button" id="icsBtn" class="linkish">{ics_label}</button></p>
     <p class="hero-sub">{hero_sub}</p>
     <div class="hero-cta">
       <a href="#adesioni" class="btn btn-gold">{cta1}</a>
       <a href="#missione" class="btn btn-ghost">{cta2}</a>
     </div>
-    <div class="hero-meta">{hero_meta}</div>
+    <div class="hero-meta" id="heroMeta">{hero_meta}</div>
   </div>
   <div class="hero-scroll" aria-hidden="true"><span>{scroll}</span><span class="line"></span></div>
 </section>
@@ -323,6 +379,7 @@ def render(t, css, js):
         <div class="fact-row"><span class="k">{fok}</span><span class="v fact-open">{fov}</span></div>
       </aside>
     </div>
+    {mission_band}
   </div>
 </section>
 
@@ -335,6 +392,7 @@ def render(t, css, js):
       <p class="lede">{why_lede}</p>
     </div>
     <div class="why-grid reveal">{why_cells}</div>
+    <div class="img-duo reveal">{ceara_porto}{ceara_industria}</div>
     <div class="stat-banner reveal">
       <div class="stat-fig">
         <p class="big">{stat_big}<span>{stat_unit}</span></p>
@@ -387,12 +445,7 @@ def render(t, css, js):
         {rin_p}
         <a href="#adesioni" class="btn btn-outline on-dark" style="margin-top:18px">{rin_cta}</a>
       </div>
-      <div class="rinasc-visual" aria-hidden="true">
-        <div>
-          <p class="big">Rinascimento</p>
-          <p class="small">{rin_visual_small}</p>
-        </div>
-      </div>
+      <div class="rinasc-visual">{rin_img}</div>
     </div>
     <div class="why-now reveal">
       <div>
@@ -553,6 +606,34 @@ def render(t, css, js):
   </div>
 </section>
 
+<section id="galleria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">{gal_eyebrow}</p>
+      <div class="rule"></div>
+      <h2>{gal_h2}</h2>
+      <p class="lede">{gal_lede}</p>
+    </div>
+    <div class="gallery reveal">{gallery}</div>
+  </div>
+</section>
+
+<section id="promotore" class="bg-paper">
+  <div class="wrap">
+    <div class="promoter reveal">
+      <div class="promoter-img">{prom_img}</div>
+      <div class="promoter-copy">
+        <p class="eyebrow">{prom_eyebrow}</p>
+        <div class="rule"></div>
+        <h2>{prom_h2}</h2>
+        <p class="promoter-role">{prom_role}</p>
+        {prom_p}
+        <a href="#adesioni" class="btn btn-outline">{prom_cta}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contatti">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -596,6 +677,19 @@ def render(t, css, js):
     </div>
   </div>
 </footer>
+<div class="sticky-cta" id="stickyCta" hidden>
+  <div>
+    <strong>{sticky_cta}</strong>
+    <span>{sticky_dates}</span>
+  </div>
+  <a href="#adesioni" class="btn btn-gold">{nav_cta}</a>
+</div>
+<button class="to-top" id="toTop" aria-label="{top_label}" hidden></button>
+<dialog class="lightbox" id="lightbox" aria-label="{zoom_label}">
+  <button class="lb-close" id="lbClose" aria-label="{close_label}">&#215;</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
 <script>{js}</script>
 </body>
 </html>
@@ -622,7 +716,7 @@ def render(t, css, js):
         values=values, aud_eyebrow=t["aud_eyebrow"], aud_h3=t["aud_h3"], audience=audience,
         rin_badge=t["rin_badge"], rin_h2a=t["rin_h2_a"], rin_h2b=t["rin_h2_b"],
         rin_p="".join("<p>{}</p>".format(x) for x in t["rin_p"]),
-        rin_cta=t["rin_cta"], rin_visual_small=t["rin_visual_small"],
+        rin_cta=t["rin_cta"],
         why_now_eyebrow=t["why_now_eyebrow"], why_now_h3=t["why_now_h3"], why_now_p=t["why_now_p"],
         narrative=t["narrative"], narrative_items=narrative, narrative_note=t["narrative_note"],
         seg_eyebrow=t["seg_eyebrow"], segments=segments,
@@ -652,6 +746,22 @@ def render(t, css, js):
         foot_copy=t["foot_copy"], foot_note=t["foot_note"],
         email=SITE["email"], phone=SITE["phone_display"], phone_href=SITE["phone_href"],
         base=BASE, js=js,
+        hero_img=img("hero", t, cls="hero-photo-img", eager=True),
+        mission_band=figure("mission_band", t, cls="band reveal"),
+        ceara_porto=figure("ceara_porto", t, cls="duo-item"),
+        ceara_industria=figure("ceara_industria", t, cls="duo-item"),
+        rin_img=img("rinascimento", t, dark=True),
+        gallery="".join(
+            figure("gallery_{}".format(i), t, cls="gal-item") for i in range(1, 7)),
+        prom_img=img("promoter", t),
+        gal_eyebrow=t["gal_eyebrow"], gal_h2=t["gal_h2"], gal_lede=t["gal_lede"],
+        prom_eyebrow=t["prom_eyebrow"], prom_h2=t["prom_h2"], prom_role=t["prom_role"],
+        prom_p="".join("<p>{}</p>".format(x) for x in t["prom_p"]),
+        prom_cta=t["prom_cta"],
+        ics_label=t["ics_label"], sticky_cta=t["sticky_cta"],
+        sticky_dates=t["sticky_dates"], top_label=t["top_label"],
+        close_label=t["close_label"], zoom_label=t["zoom_label"],
+        nav_cta=t["nav_cta"],
     )
     return head + body
 
@@ -673,6 +783,12 @@ def main():
             .replace("__SENDING__", t["f_sending"])
             .replace("__ERROR__", t["f_error"].format(email=SITE["email"]))
             .replace("__SUBJECT__", t["f_mail_subject"])
+            .replace("__START__", SITE["start_date"])
+            .replace("__END__", SITE["end_date"])
+            .replace("__COUNT_LABEL__", t["countdown_label"])
+            .replace("__COUNT_UNIT__", t["countdown_unit"])
+            .replace("__COUNT_TODAY__", t["countdown_today"])
+            .replace("__ICS_TITLE__", "Latin America Mission 2026 - Ceara, Brasile")
         )
         html = render(t, css, js)
         out = os.path.join(ROOT, "index.html") if t["lang"] == "it" \
@@ -778,6 +894,17 @@ Sitemap: {base}/sitemap.xml
     open(os.path.join(ROOT, ".nojekyll"), "w").write("")
 
     print("  robots.txt · sitemap.xml · llms.txt · 404.html")
+
+    print("\n  Zone immagine")
+    missing = 0
+    for slot, spec in IMAGES.items():
+        ok = IMG_STATUS.get(slot, False)
+        missing += 0 if ok else 1
+        print("    {mark} {slot:<16} {w}x{h:<6} assets/img/{f}{note}".format(
+            mark="ok" if ok else "--", slot=slot, w=spec["w"], h=spec["h"],
+            f=spec["file"],
+            note="" if ok else ("   (opzionale)" if spec.get("silent") else "   DA FORNIRE")))
+    print("    {}/{} slot ancora vuoti".format(missing, len(IMAGES)))
 
 
 if __name__ == "__main__":

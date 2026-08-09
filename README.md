@@ -56,6 +56,28 @@ nell'altra. Poi `python3 src/build.py`.
 
 Dati di sito (email, telefono, date, dominio) nel dizionario `SITE` in cima allo stesso file.
 
+## Zone immagine
+
+Il sito ha **12 slot immagine** già predisposti. Finché il file non esiste, al suo posto compare
+un segnaposto che dice cosa mettere, in che misura e con che nome salvarlo. Non serve toccare
+il codice: basta copiare l'immagine in `assets/img/` con il nome indicato e rilanciare la build.
+
+| Slot | File | Misura | Dove compare |
+|---|---|---|---|
+| `hero` | `hero-ceara.jpg` | 2400×1350 | sfondo del hero (opzionale: se manca resta il gradiente) |
+| `mission_band` | `mission-band.jpg` | 1920×760 | fascia larga sotto "La missione" |
+| `ceara_porto` | `ceara-porto-pecem.jpg` | 1200×900 | coppia in "Perché il Ceará" |
+| `ceara_industria` | `ceara-industria.jpg` | 1200×900 | coppia in "Perché il Ceará" |
+| `rinascimento` | `rinascimento-district.jpg` | 1200×1000 | Rinascimento Design District |
+| `gallery_1…6` | `gallery-1.jpg` … `gallery-6.jpg` | 1200×900 | sezione "Il Ceará in immagini" |
+| `promoter` | `promoter.jpg` | 900×1100 | blocco "Chi guida la missione" |
+
+`python3 src/build.py` stampa a fine build l'elenco degli slot con lo stato (`ok` / `DA FORNIRE`).
+
+Le didascalie, i testi alternativi e le descrizioni dei segnaposto stanno nel dizionario
+`IMAGES` in [`src/content.py`](src/content.py). Le immagini della galleria sono cliccabili e si
+aprono a tutto schermo (lightbox); i segnaposto no.
+
 ## Modulo di adesione
 
 Di default il form **non ha un endpoint**: alla conferma apre il client di posta con tutti i
@@ -67,10 +89,22 @@ Per farlo inviare davvero in background, imposta l'endpoint in `SITE["form_endpo
 privacy, page`. Funziona con Formspree, Make, n8n, Zapier o un webhook proprio.
 È già presente un honeypot anti-bot (campo `website`).
 
+## Cosa c'è nella pagina
+
+Hero → fascia loghi istituzionali → La missione → Perché il Ceará → Settori → Perché
+partecipare / A chi si rivolge → Rinascimento Design District → Programma → Partner locali →
+FAQ → Adesioni (modulo) → Il Ceará in immagini → Chi guida la missione → Contatti.
+
+Interazioni: countdown ai giorni alla partenza nel hero, "Aggiungi al calendario" che genera
+un `.ics`, barra CTA fissa su mobile (si nasconde quando sei già sul modulo), torna-su su
+desktop, lightbox della galleria, scrollspy in navigazione, menu mobile.
+
 ## Performance
 
 Il CSS e il JS sono **inlinati** nelle pagine: nessuna richiesta bloccante in render.
-Peso totale per pagina ~132 kB, 5 richieste, di cui 3 loghi in lazy-load.
+Peso totale per pagina ~132 kB, 5 richieste, di cui 3 loghi in lazy-load. Le immagini che
+fornirai sono tutte in `loading="lazy"` con `width`/`height` dichiarati, quindi non causano
+salti di layout.
 
 ## SEO
 
@@ -81,6 +115,7 @@ Peso totale per pagina ~132 kB, 5 richieste, di cui 3 loghi in lazy-load.
 
 ## Da completare
 
+- [ ] Le 12 immagini degli slot (vedi *Zone immagine*)
 - [ ] Endpoint del modulo di adesione (`SITE["form_endpoint"]`)
 - [ ] Verificare in FAQ costi, tempi di adesione e servizi inclusi: i testi attuali sono
       formulati in modo prudente e vanno confermati dallo Studio

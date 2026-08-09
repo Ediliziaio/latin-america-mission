@@ -76,6 +76,7 @@ for (const p of PAGES) {
 
       // images without alt / dimensions
       r.badImgs = [...document.images]
+        .filter((i) => i.getAttribute('src')) // le <img> riempite via JS non hanno src a riposo
         .filter((i) => !i.hasAttribute('alt') || (!i.width && !i.getAttribute('width')))
         .map((i) => i.currentSrc || i.src);
 
