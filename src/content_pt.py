@@ -36,7 +36,7 @@ PT = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasil",
     "hero_dates": "16 – 23 de novembro de 2026",
-    "hero_sub": "Oito dias para abrir uma rota industrial concreta entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
+    "hero_sub": "Oito dias para abrir um caminho internacional concreto entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
     "hero_cta_1": "Envie sua inscrição",
     "hero_cta_2": "Conheça a missão",
     "hero_meta": [

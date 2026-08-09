@@ -193,7 +193,7 @@ IT = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasile",
     "hero_dates": "16 – 23 novembre 2026",
-    "hero_sub": "Otto giorni per aprire una rotta industriale concreta tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto di Pecém e alla FTZ, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
+    "hero_sub": "Otto giorni per aprire un percorso internazionale concreto tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto di Pecém e alla FTZ, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
     "hero_cta_1": "Invia la tua adesione",
     "hero_cta_2": "Scopri la missione",
     "hero_meta": [
@@ -511,7 +511,7 @@ EN = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brazil",
     "hero_dates": "16 – 23 November 2026",
-    "hero_sub": "Eight days to open a concrete industrial route between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the FTZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
+    "hero_sub": "Eight days to open a concrete international route between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the FTZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
     "hero_cta_1": "Submit your application",
     "hero_cta_2": "Discover the mission",
     "hero_meta": [
