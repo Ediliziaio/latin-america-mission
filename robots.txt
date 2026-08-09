@@ -21,4 +21,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://latinamericamission.armandorossi.it/sitemap.xml
+Sitemap: https://latin-america-mission.vercel.app/sitemap.xml

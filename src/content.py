@@ -2,7 +2,10 @@
 """Contenuti bilingui del sito Latin America Mission — Ceará 2026."""
 
 SITE = {
-    "base_url": "https://latinamericamission.armandorossi.it",
+    # Dominio pubblico attuale. Quando latinamericamission.armandorossi.it sara'
+    # registrato e collegato in Vercel, rimetti quello qui e rilancia la build:
+    # canonical, hreflang, og:image, sitemap e llms.txt si aggiornano da soli.
+    "base_url": "https://latin-america-mission.vercel.app",
     "email": "info@studioavvocatorossi.it",
     "phone_display": "+39 338 611 5394",
     "phone_href": "+393386115394",

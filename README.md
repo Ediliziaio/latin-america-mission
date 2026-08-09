@@ -71,9 +71,18 @@ npm i -g vercel && cd ~/latin-america-mission && vercel --prod
 
 Il primo `vercel` chiede il login nel browser e crea il progetto; i successivi deployano e basta.
 
-Dopo il primo deploy, in *Settings → Domains* collega `latinamericamission.armandorossi.it`:
-finché il dominio non è collegato, gli URL canonical e la sitemap puntano a un indirizzo che
-non risponde ancora.
+**Stato: online** su https://latin-america-mission.vercel.app (progetto `latin-america-mission`,
+team `ediliziaios-projects`). Ogni push su `main` ridistribuisce da solo.
+
+### Dominio definitivo
+
+`armandorossi.it` **non è ancora registrato** (nessun record NS), quindi `SITE["base_url"]` punta
+per ora al dominio Vercel: se puntasse a un dominio inesistente, l'`og:image` non caricherebbe
+nelle anteprime social e Google non indicizzerebbe nulla.
+
+Quando `latinamericamission.armandorossi.it` esiste e lo colleghi in *Settings → Domains*,
+rimetti quel dominio in `SITE["base_url"]` ([`src/content.py`](src/content.py)) e rilancia la
+build: canonical, hreflang, `og:image`, `sitemap.xml` e `llms.txt` si riallineano da soli.
 
 ## Modificare i contenuti
 
