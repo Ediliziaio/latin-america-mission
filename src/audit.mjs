@@ -51,6 +51,21 @@ for (const p of PAGES) {
     const load = Date.now() - t0;
     await page.evaluate(() =>
       document.querySelectorAll('.reveal').forEach((e) => e.classList.add('in')));
+
+    // Scorre tutta la pagina e torna su: senza questo passaggio le immagini in
+    // loading="lazy" non partono mai e lo screenshot full-page esce con i buchi.
+    await page.evaluate(() => new Promise((done) => {
+      let y = 0;
+      (function step() {
+        y += window.innerHeight;
+        window.scrollTo(0, y);
+        if (y < document.body.scrollHeight) setTimeout(step, 60);
+        else { window.scrollTo(0, 0); setTimeout(done, 150); }
+      })();
+    }));
+    await page.evaluate(() => Promise.all(
+      [...document.images].filter((i) => !i.complete)
+        .map((i) => new Promise((r) => { i.onload = i.onerror = r; }))));
     await page.waitForTimeout(250);
 
     await page.screenshot({

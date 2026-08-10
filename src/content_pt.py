@@ -36,7 +36,7 @@ PT = {
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasil",
     "hero_dates": "16 – 23 de novembro de 2026",
-    "hero_sub": "Oito dias para abrir um caminho internacional concreto entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
+    "hero_sub": "Oito dias para abrir um caminho concreto de internacionalização entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
     "hero_cta_1": "Envie sua inscrição",
     "hero_cta_2": "Conheça a missão",
     "hero_meta": [
@@ -99,6 +99,15 @@ PT = {
     ],
 
     # ---- setores ----
+    "data_lbl": "O Ceará em síntese",
+    "data_note": "Cartões elaborados pelo Governo do Estado do Ceará. Fontes: ADECE, IPECE, Complexo do Pecém.",
+
+    "doc_eyebrow": "Documentos",
+    "doc_h3": "Economic Report do Governo do Ceará",
+    "doc_p": "O boletim econômico oficial da Secretaria do Desenvolvimento Econômico: a chegada da MG Motor ao polo automotivo, o crescimento do PIB acima da média brasileira, a ZPE Ceará e a apresentação do Pecém Multimodal Hub ao lado da Latin America Mission.",
+    "doc_meta": "PDF · 5 páginas · em inglês · 1º de julho de 2026 · fonte: Governo do Estado do Ceará (SDE)",
+    "doc_cta": "Baixar o relatório",
+
     "sect_eyebrow": "Setores da missão",
     "sect_h2": "Uma missão ampla e multissetorial",
     "sect_lede": "A missão é aberta e transversal: ao lado do foco em design e materiais, o Ceará oferece hoje oportunidades concretas em logística, energia, máquinas, tecnologia, agroalimentar e manufatura avançada.",
@@ -327,52 +336,107 @@ IMAGES_PT = {
     },
     "mission_band": {
         "label_pt": "Faixa da missão — delegação, mesa institucional ou skyline de Fortaleza",
-        "alt_pt": "Delegação italiana em visita institucional no Estado do Ceará",
+        "alt_pt": "Vista aérea da orla de Fortaleza, capital do Estado do Ceará",
         "cap_pt": "A missão reúne empresas italianas, instituições brasileiras e o sistema industrial do Ceará.",
     },
     "ceara_porto": {
         "label_pt": "Porto do Pecém — cais, terminal ou vista aérea",
-        "alt_pt": "Porto do Pecém, polo logístico e portuário do Estado do Ceará",
+        "alt_pt": "Navios de carga e guindastes no cais do Porto do Pecém, Estado do Ceará",
         "cap_pt": "Porto do Pecém e ZPE Ceará",
     },
     "ceara_industria": {
         "label_pt": "Indústria — planta, jazida de rocha ornamental ou parque eólico",
-        "alt_pt": "Planta industrial no Estado do Ceará",
-        "cap_pt": "Indústria e energia renovável",
+        "alt_pt": "Visita técnica ao Complexo Industrial e Portuário do Pecém, com o parque eólico ao fundo",
+        "cap_pt": "Visitas técnicas às instalações",
     },
     "rinascimento": {
         "label_pt": "Rinascimento Design District — render, masterplan ou materiais",
-        "alt_pt": "Rinascimento Design District, ecossistema industrial de design no Ceará",
+        "alt_pt": "Render do Rinascimento Design District: galpões, pátios e logística no Ceará",
+    },
+    "rinascimento_logo": {
+        "label_pt": "Marca do Rinascimento Design District",
+        "alt_pt": "Marca do Rinascimento Design District",
     },
     "gallery_1": {
-        "label_pt": "Fortaleza — skyline ou orla",
-        "alt_pt": "Skyline de Fortaleza, capital do Estado do Ceará",
-        "cap_pt": "Fortaleza",
+        "label_pt": "Visita a empresa — planta ou sede de um parceiro",
+        "alt_pt": "Delegação da missão em visita à sede da Enel Brasil",
+        "cap_pt": "Visita à Enel Brasil",
     },
     "gallery_2": {
-        "label_pt": "Rodadas de negócios — mesa de trabalho com empresas",
-        "alt_pt": "Rodadas de negócios entre empresas italianas e parceiros brasileiros",
-        "cap_pt": "Rodadas de negócios",
+        "label_pt": "Mesa institucional — encontro com a Secretaria do Desenvolvimento Econômico",
+        "alt_pt": "Encontro na Secretaria do Desenvolvimento Econômico do Estado do Ceará",
+        "cap_pt": "Mesa com a Secretaria do Desenvolvimento Econômico",
     },
     "gallery_3": {
-        "label_pt": "Rochas ornamentais — jazida, blocos ou chapas beneficiadas",
-        "alt_pt": "Beneficiamento de rochas ornamentais no Estado do Ceará",
-        "cap_pt": "Rochas ornamentais e superfícies",
+        "label_pt": "Delegação — foto de grupo com os parceiros locais",
+        "alt_pt": "Delegação italiana e parceiros brasileiros ao final de um encontro",
+        "cap_pt": "Delegação italiana e parceiros brasileiros",
     },
     "gallery_4": {
-        "label_pt": "Energia — parque eólico, solar ou hidrogênio verde",
-        "alt_pt": "Parque eólico no Estado do Ceará",
-        "cap_pt": "Energia e transição",
+        "label_pt": "Sedes institucionais — FIEC, Casa da Indústria",
+        "alt_pt": "Edifício Beto Studart, Casa da Indústria: sede da FIEC, SESI, SENAI e IEL em Fortaleza",
+        "cap_pt": "Casa da Indústria, sede da FIEC",
     },
     "gallery_5": {
-        "label_pt": "Visita institucional — assinatura de acordo ou encontro com o Governo",
-        "alt_pt": "Encontro institucional com o Governo do Estado do Ceará",
-        "cap_pt": "Mesas institucionais",
+        "label_pt": "Sedes institucionais — Fecomércio Ceará",
+        "alt_pt": "Sede da Fecomércio Ceará, com Sesc, Senac e IPDC, em Fortaleza",
+        "cap_pt": "Fecomércio Ceará",
     },
     "gallery_6": {
-        "label_pt": "Design e mobiliário — showroom, produto ou materiais",
-        "alt_pt": "Showroom de design e mobiliário",
-        "cap_pt": "Design e mobiliário",
+        "label_pt": "Encontros de trabalho — reunião com os parceiros",
+        "alt_pt": "Reunião de trabalho entre a delegação e os parceiros locais",
+        "cap_pt": "Encontros de trabalho",
+    },
+    "gallery_7": {
+        "label_pt": "Troca institucional — entrega de materiais",
+        "alt_pt": "Entrega de uma publicação ao final de uma visita técnica",
+        "cap_pt": "Troca institucional",
+    },
+    "gallery_8": {
+        "label_pt": "Visita a empresa — sala de controle e encontros",
+        "alt_pt": "Sala de controle da Enel Brasil e momentos do encontro com a delegação",
+        "cap_pt": "Enel Brasil — sala de controle e encontros",
+    },
+    "gallery_9": {
+        "label_pt": "Acordos — aperto de mãos ao final do encontro",
+        "alt_pt": "Aperto de mãos ao final de uma reunião de trabalho",
+        "cap_pt": "Novos acordos",
+    },
+    "gallery_10": {
+        "label_pt": "Encontro institucional — delegação na sede",
+        "alt_pt": "Delegação da missão durante um encontro institucional",
+        "cap_pt": "Encontro institucional",
+    },
+    "gallery_11": {
+        "label_pt": "Relações no território — representantes da missão",
+        "alt_pt": "Representantes italianos e brasileiros da missão",
+        "cap_pt": "Relações no território",
+    },
+    "gallery_12": {
+        "label_pt": "Reconhecimentos — entrega de uma placa",
+        "alt_pt": "Entrega de uma placa durante um encontro institucional",
+        "cap_pt": "Reconhecimentos e trocas institucionais",
+    },
+    "gallery_13": {
+        "label_pt": "Mesas de trabalho — reunião em sala de conferências",
+        "alt_pt": "Reunião de trabalho em sala de conferências",
+        "cap_pt": "Mesas de trabalho",
+    },
+    "dato_hub_portuale": {
+        "label_pt": "Cartão de dados — hub portuário e Zona de Processamento de Exportação",
+        "alt_pt": "Cartão: hub portuário e ZPE do Ceará",
+    },
+    "dato_energie_rinnovabili": {
+        "label_pt": "Cartão de dados — energias renováveis",
+        "alt_pt": "Cartão: energias renováveis no Ceará",
+    },
+    "dato_hub_tecnologico": {
+        "label_pt": "Cartão de dados — hub tecnológico e data centers",
+        "alt_pt": "Cartão: hub tecnológico da América Latina",
+    },
+    "dato_crescita_pil": {
+        "label_pt": "Cartão de dados — crescimento do PIB",
+        "alt_pt": "Cartão: crescimento do PIB do Ceará",
     },
     "promoter": {
         "label_pt": "Retrato — Armando Rossi ou equipe do escritório",

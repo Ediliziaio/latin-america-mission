@@ -441,13 +441,36 @@ figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);letter-spacing:.0
 .img-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,26px);margin-top:clamp(24px,3vw,34px)}
 .duo-item img{aspect-ratio:4/3}
 
-/* galleria */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2.2vw,24px)}
-.gal-item{margin:0}
-.gal-item img{aspect-ratio:4/3;cursor:zoom-in;transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s}
-.gal-item{overflow:hidden;border-radius:var(--radius)}
+/* galleria: colonne a mosaico, ogni foto tiene il suo rapporto */
+.gallery{columns:3;column-gap:clamp(16px,2.2vw,24px)}
+.gal-item{margin:0 0 clamp(16px,2.2vw,24px);break-inside:avoid;overflow:hidden;border-radius:var(--radius)}
+.gal-item img{aspect-ratio:auto;height:auto;display:block;cursor:zoom-in;transition:transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s}
 .gal-item img:hover{transform:scale(1.03)}
-.gal-item figcaption{padding-inline:2px}
+.gal-item figcaption{padding:8px 2px 0}
+
+/* schede dati del Governo del Ceará (solo pagina IT) */
+.data-strip{margin-top:clamp(30px,3.6vw,44px)}
+.data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start;gap:clamp(14px,1.8vw,20px);margin-top:16px}
+.data-card{width:100%;height:auto;display:block;border-radius:var(--radius);box-shadow:var(--shadow-sm);cursor:zoom-in}
+.data-card.wide{grid-column:1/-1}
+.data-note{margin-top:14px;font-size:.82rem;color:var(--muted)}
+
+/* documento scaricabile */
+.doc-card{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:clamp(18px,2.6vw,32px);margin-top:clamp(26px,3.2vw,38px);
+  padding:clamp(24px,3vw,34px);background:var(--cream);
+  border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);
+}
+.doc-copy{flex:1 1 400px}
+.doc-card h3{font-size:clamp(1.15rem,1rem + .5vw,1.4rem);color:var(--ink);margin:10px 0 8px}
+.doc-card p{color:var(--muted);font-size:.97rem;max-width:64ch}
+.doc-meta{margin-top:12px;font-size:.82rem}
+.doc-size{display:block;font-size:.7rem;font-weight:600;letter-spacing:.09em;opacity:.72}
+
+/* marchio del distretto, su fondo chiaro perche' la sezione e' scura */
+.rin-logo{display:block;width:max-content;background:#fff;border-radius:12px;padding:9px;margin-bottom:16px}
+.rin-logo-img{display:block;width:74px;height:74px}
 
 /* promotore */
 .promoter{display:grid;grid-template-columns:.42fr .58fr;gap:clamp(30px,4.4vw,54px);align-items:center}
@@ -500,6 +523,7 @@ figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);letter-spacing:.0
 @media (max-width:1000px){
   .promoter{grid-template-columns:1fr}
   .promoter-img{max-width:420px}
+  .gallery{columns:2}
 }
 @media (max-width:860px){
   .sticky-cta{display:flex}
@@ -509,6 +533,8 @@ figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);letter-spacing:.0
 }
 @media (max-width:640px){
   .img-duo{grid-template-columns:1fr}
+  .gallery{columns:1}
+  .doc-card .btn{width:100%;justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){
   .gal-item img:hover{transform:none}

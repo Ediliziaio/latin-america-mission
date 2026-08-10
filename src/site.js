@@ -153,7 +153,8 @@
   if (lb && typeof lb.showModal === 'function') {
     var lbImg = document.getElementById('lbImg');
     var lbCap = document.getElementById('lbCap');
-    document.querySelectorAll('.gal-item img').forEach(function (im) {
+    // anche le schede dati: su mobile il testo impresso e' piccolo, servono a schermo pieno
+    document.querySelectorAll('.gal-item img, .data-card').forEach(function (im) {
       im.addEventListener('click', function () {
         lbImg.src = im.currentSrc || im.src;
         lbImg.alt = im.alt;

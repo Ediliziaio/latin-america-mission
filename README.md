@@ -17,7 +17,8 @@ pt/index.html         pagina PT-BR (generata — non modificare a mano)
 robots.txt sitemap.xml llms.txt 404.html   (generati)
 assets/
   fonts/              Inter Tight variable, subset latin + latin-ext, self-hosted
-  img/                loghi istituzionali (WebP), favicon, immagine OG
+  img/                foto della missione e schede dati (WebP), loghi, favicon, immagine OG
+  docs/               documenti scaricabili (Economic Report del Governo del Ceará)
 src/
   content.py          testi IT ed EN + registro delle immagini  ←  si modifica qui
   content_pt.py       testi PT-BR
@@ -95,21 +96,44 @@ Dati di sito (email, telefono, date, dominio) nel dizionario `SITE` in cima allo
 
 ## Zone immagine
 
-Il sito ha **12 slot immagine** già predisposti. Finché il file non esiste, al suo posto compare
+Il sito ha **24 slot immagine**, tutti pieni. Finché un file non esiste, al suo posto compare
 un segnaposto che dice cosa mettere, in che misura e con che nome salvarlo. Non serve toccare
 il codice: basta copiare l'immagine in `assets/img/` con il nome indicato e rilanciare la build.
 
-| Slot | File | Misura | Dove compare |
-|---|---|---|---|
-| `hero` | `hero-ceara.jpg` | 2400×1350 | sfondo del hero — **già presente** (skyline di Fortaleza al tramonto, foto Unsplash, licenza libera anche commerciale, `unsplash.com/photos/lWMkpyKglbs`) |
-| `mission_band` | `mission-band.jpg` | 1920×760 | fascia larga sotto "La missione" |
-| `ceara_porto` | `ceara-porto-pecem.jpg` | 1200×900 | coppia in "Perché il Ceará" |
-| `ceara_industria` | `ceara-industria.jpg` | 1200×900 | coppia in "Perché il Ceará" |
-| `rinascimento` | `rinascimento-district.jpg` | 1200×1000 | Rinascimento Design District |
-| `gallery_1…6` | `gallery-1.jpg` … `gallery-6.jpg` | 1200×900 | sezione "Il Ceará in immagini" |
-| `promoter` | `promoter.jpg` | 900×1100 | blocco "Chi guida la missione" |
+| Slot | File | Dove compare |
+|---|---|---|
+| `hero` | `hero-ceara.jpg` | sfondo del hero (skyline di Fortaleza al tramonto, foto Unsplash, licenza libera anche commerciale, `unsplash.com/photos/lWMkpyKglbs`) |
+| `mission_band` | `mission-band.webp` | fascia larga sotto "La missione" — waterfront di Fortaleza |
+| `ceara_porto` | `ceara-porto-pecem.webp` | coppia in "Perché il Ceará" — banchine di Pecém |
+| `ceara_industria` | `ceara-industria.webp` | coppia in "Perché il Ceará" — visita tecnica a Pecém |
+| `rinascimento` | `rinascimento-district.webp` | render del distretto |
+| `rinascimento_logo` | `rinascimento-logo.webp` | marchio del distretto, sopra il titolo di sezione |
+| `gallery_1…13` | `gallery-1.webp` … `gallery-13.webp` | sezione "Il Ceará in immagini" |
+| `promoter` | `promoter.webp` | blocco "Chi guida la missione" |
+| `dato_*` | `dato-*.webp` | quattro schede dati in "Perché il Ceará" — **solo pagina IT** |
 
 `python3 src/build.py` stampa a fine build l'elenco degli slot con lo stato (`ok` / `DA FORNIRE`).
+
+La **galleria è a mosaico**: ogni foto tiene il suo rapporto d'immagine, quindi non serve
+ritagliare tutto a 4:3. Basta dichiarare in `IMAGES` la misura reale del file.
+
+### Schede dati
+
+Le quattro infografiche del Governo del Ceará (hub portuale, energie rinnovabili, hub
+tecnologico, crescita del PIL) hanno il testo **impresso nell'immagine, in italiano**: per
+questo compaiono solo sulla pagina IT. La lista degli slot e il filtro di lingua sono in
+`DATA_CARDS` / `DATA_CARDS_LANGS` in [`src/build.py`](src/build.py): quando arrivano le
+versioni EN e PT basta aggiungere i file e allargare il filtro.
+
+## Documenti scaricabili
+
+`assets/docs/economic-report-ceara-2026-07.pdf` è il bollettino economico ufficiale della
+Segreteria dello Sviluppo Economico del Ceará (SDE), in inglese. Compare come card di download
+in fondo a "Perché il Ceará", in tutte e tre le lingue, ed è linkato in `llms.txt`.
+
+Per sostituirlo o aggiungerne un altro: metti il PDF in `assets/docs/`, aggiorna `DOC_FILE` in
+[`src/build.py`](src/build.py) e i testi `doc_*` nei tre file di contenuti. Se il file non
+esiste, la card semplicemente non viene generata.
 
 Uno slot può dichiarare `"responsive": [1200, 1600]`: in quel caso `python3 src/make_variants.py`
 genera le versioni ridotte e la build emette un `srcset`, così il mobile scarica l'immagine
@@ -143,10 +167,10 @@ desktop, lightbox della galleria, scrollspy in navigazione, menu mobile.
 ## Performance
 
 Il CSS e il JS sono **inlinati** nelle pagine: nessuna richiesta bloccante in render.
-Peso totale ~246 kB su mobile e ~309 kB su desktop, 6 richieste (la foto del hero pesa da
-sola più di tutto il resto). Le immagini che
-fornirai sono tutte in `loading="lazy"` con `width`/`height` dichiarati, quindi non causano
-salti di layout.
+Al primo schermo il browser scarica ~336 kB su mobile e ~531 kB su desktop in 7–9 richieste
+(la foto del hero pesa da sola più di tutto il resto). Le altre 23 immagini sono tutte in
+`loading="lazy"` con `width`/`height` dichiarati — non causano salti di layout e arrivano solo
+se l'utente scorre: a pagina interamente scorsa il totale è ~2,0–2,5 MB.
 
 ## SEO
 
@@ -157,7 +181,10 @@ salti di layout.
 
 ## Da completare
 
-- [ ] Le 11 immagini degli slot ancora vuoti (vedi *Zone immagine*)
+- [ ] Far confermare allo Studio didascalie e testi alternativi delle foto della missione:
+      sono scritti su quello che si vede nell'immagine, senza nomi di persone né sedi non
+      identificabili con certezza
+- [ ] Versioni EN e PT delle quattro schede dati (oggi solo sulla pagina italiana)
 - [ ] Far rileggere il portoghese a un madrelingua brasiliano prima del lancio
 - [ ] Endpoint del modulo di adesione (`SITE["form_endpoint"]`)
 - [ ] Verificare in FAQ costi, tempi di adesione e servizi inclusi: i testi attuali sono

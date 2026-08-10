@@ -192,6 +192,63 @@ def figure(slot, t, cls="", dark=False, eager=False):
 
 
 # --------------------------------------------------------------------------- partials
+GALLERY_SLOTS = 13
+
+# Schede dati fornite dal Governo del Ceará: il testo e' impresso nell'immagine,
+# ed e' in italiano. Finche' non arrivano le versioni EN/PT le mostriamo solo
+# sulla pagina italiana — meglio nessuna scheda che una scheda illeggibile.
+DATA_CARDS = [("dato_hub_portuale", ""), ("dato_energie_rinnovabili", ""),
+              ("dato_hub_tecnologico", ""), ("dato_crescita_pil", " wide")]
+DATA_CARDS_LANGS = ("it",)
+
+# Documento scaricabile: il bollettino economico ufficiale della SDE.
+DOC_FILE = "docs/economic-report-ceara-2026-07.pdf"
+
+
+def rinascimento_logo(t):
+    """Marchio del distretto, in un riquadro chiaro perche' la sezione e' scura."""
+    inner = img("rinascimento_logo", t, cls="rin-logo-img")
+    return '<p class="rin-logo">{}</p>'.format(inner) if inner else ""
+
+
+def data_cards_html(t):
+    if t["lang"] not in DATA_CARDS_LANGS:
+        return ""
+    cards = "".join(img(slot, t, cls="data-card" + extra) for slot, extra in DATA_CARDS)
+    if not cards:
+        return ""
+    return (
+        '<div class="data-strip reveal">'
+        '<p class="eyebrow">{lbl}</p>'
+        '<div class="data-grid">{cards}</div>'
+        '<p class="data-note">{note}</p>'
+        "</div>"
+    ).format(lbl=t["data_lbl"], cards=cards, note=t["data_note"])
+
+
+def doc_card_html(t):
+    """Card di download del report; sparisce se il PDF non e' in assets/."""
+    if not os.path.exists(os.path.join(ROOT, "assets", DOC_FILE)):
+        return ""
+    size = os.path.getsize(os.path.join(ROOT, "assets", DOC_FILE))
+    return (
+        '<div class="doc-card reveal">'
+        '<div class="doc-copy">'
+        '<p class="eyebrow">{eyebrow}</p>'
+        "<h3>{h3}</h3><p>{p}</p>"
+        '<p class="doc-meta">{meta}</p>'
+        "</div>"
+        '<a class="btn btn-gold" href="{prefix}assets/{f}" '
+        'download type="application/pdf">{cta}'
+        '<span class="doc-size">{kb}&nbsp;kB</span></a>'
+        "</div>"
+    ).format(
+        eyebrow=t["doc_eyebrow"], h3=t["doc_h3"], p=t["doc_p"], meta=t["doc_meta"],
+        prefix=t["_asset_prefix"], f=DOC_FILE, cta=t["doc_cta"],
+        kb="{:,}".format(round(size / 1024)).replace(",", "."),
+    )
+
+
 def nav_html(t, assets):
     items = "".join(
         '<a href="{}">{}</a>'.format(h, l) for h, l in t["nav"]
@@ -417,6 +474,8 @@ def render(t, css, js):
       <p class="pecem-lbl">{pecem_pillars_lbl}</p>
       <div class="pecem-pillars">{pecem_pillars}</div>
     </div>
+    {data_cards}
+    {doc_card}
   </div>
 </section>
 
@@ -454,6 +513,7 @@ def render(t, css, js):
   <div class="wrap">
     <div class="rinasc-lead reveal">
       <div>
+        {rin_logo}
         <p class="badge">{rin_badge}</p>
         <h2>{rin_h2a}<em>{rin_h2b}</em></h2>
         {rin_p}
@@ -771,8 +831,12 @@ def render(t, css, js):
         ceara_porto=figure("ceara_porto", t, cls="duo-item"),
         ceara_industria=figure("ceara_industria", t, cls="duo-item"),
         rin_img=img("rinascimento", t, dark=True),
+        rin_logo=rinascimento_logo(t),
+        data_cards=data_cards_html(t),
+        doc_card=doc_card_html(t),
         gallery="".join(
-            figure("gallery_{}".format(i), t, cls="gal-item") for i in range(1, 7)),
+            figure("gallery_{}".format(i), t, cls="gal-item")
+            for i in range(1, GALLERY_SLOTS + 1)),
         prom_img=img("promoter", t),
         gal_eyebrow=t["gal_eyebrow"], gal_h2=t["gal_h2"], gal_lede=t["gal_lede"],
         prom_eyebrow=t["prom_eyebrow"], prom_h2=t["prom_h2"], prom_role=t["prom_role"],
@@ -877,12 +941,9 @@ Sitemap: {base}/sitemap.xml
 ## In breve
 - Date: 16–23 novembre 2026
 - Luogo: Fortaleza, Stato del Ceará, Brasile
-- Formato: incontri B2B, visite istituzionali e tecniche (Porto del Pecém, ZPE Ceará), networking
-- Settori: design e arredamento, pietre naturali e superfici, materiali per architettura, legno,
-  vetro e serramenti, illuminazione e smart building, energia e transizione energetica,
-  logistica e infrastrutture, macchinari e impiantistica, agroalimentare, tecnologie digitali,
-  manifattura avanzata
-- Progetto di punta presentato: Rinascimento Design District
+- Formato: incontri B2B, visite istituzionali e tecniche (Porto di Pecém, FTZ Ceará), networking
+- Settori della missione: {sectors}
+- Progetto di punta presentato: Rinascimento Design District, con le filiere di {segments}
 - Adesioni: aperte fino a esaurimento posti
 - Contatti: {email} · {phone}
 
@@ -891,10 +952,18 @@ Sitemap: {base}/sitemap.xml
 - [Official website (EN)]({base}/en/): programme, sectors, partners, FAQ and application form
 - [Site oficial (PT-BR)]({base}/pt/): programação, setores, parceiros, perguntas frequentes e formulário de inscrição
 
+## Documenti
+- [Economic Report del Governo dello Stato del Ceará (PDF, inglese, 1º luglio 2026)]({base}/assets/{doc}):
+  bollettino della Segreteria dello Sviluppo Economico (SDE) con l'arrivo di MG Motor nel polo
+  automotive, la crescita del PIL statale, la FTZ Ceará e la presentazione del Pecém Multimodal
+  Hub insieme alla Latin America Mission.
+
 ## Domande frequenti
 {faq}
 """.format(
-        base=BASE, email=SITE["email"], phone=SITE["phone_display"],
+        base=BASE, email=SITE["email"], phone=SITE["phone_display"], doc=DOC_FILE,
+        sectors=", ".join(plain(s[1]) for s in it["sectors"]).lower(),
+        segments=", ".join(plain(s[0]) for s in it["segments"]).lower(),
         faq="\n".join("- **{}** {}".format(plain(q), plain(a)) for q, a in it["faq"]),
     )
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
