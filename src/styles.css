@@ -497,7 +497,7 @@ figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);letter-spacing:.0
 
 /* rinascimento: il visual ora ospita render o segnaposto */
 .rinasc-visual{aspect-ratio:auto;border:0;padding:0;background:none;display:block}
-.rinasc-visual img{aspect-ratio:6/5;border-radius:var(--radius);box-shadow:var(--shadow)}
+.rinasc-visual img{aspect-ratio:1500/776;border-radius:var(--radius);box-shadow:var(--shadow)}
 
 /* barra CTA mobile */
 .sticky-cta{

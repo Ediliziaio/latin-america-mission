@@ -94,11 +94,11 @@ IMAGES = {
         "cap_en": "Technical visits to the facilities",
     },
     "rinascimento": {
-        "file": "rinascimento-district.webp", "w": 1200, "h": 1000,
+        "file": "rinascimento-district.webp", "w": 1500, "h": 776,
         "label_it": "Rinascimento Design District — render, masterplan o materiali",
         "label_en": "Rinascimento Design District — render, masterplan or materials",
-        "alt_it": "Render del Rinascimento Design District: capannoni, piazzali e logistica nel Ceará",
-        "alt_en": "Render of the Rinascimento Design District: buildings, yards and logistics in Ceará",
+        "alt_it": "Render aereo del Rinascimento Design District nel Ceará: edifici delle filiere di design, illuminazione, legno, pietra, vetro e superfici, con viali alberati e logistica integrata",
+        "alt_en": "Aerial render of the Rinascimento Design District in Ceará: buildings for the design, lighting, wood, stone, glass and surfaces supply chains, with tree-lined avenues and integrated logistics",
     },
     # marchio del distretto, usato come badge nella sezione Rinascimento
     "rinascimento_logo": {

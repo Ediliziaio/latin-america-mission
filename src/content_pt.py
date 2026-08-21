@@ -364,7 +364,7 @@ IMAGES_PT = {
     },
     "rinascimento": {
         "label_pt": "Rinascimento Design District — render, masterplan ou materiais",
-        "alt_pt": "Render do Rinascimento Design District: galpões, pátios e logística no Ceará",
+        "alt_pt": "Render aéreo do Rinascimento Design District no Ceará: edifícios das cadeias de design, iluminação, madeira, pedra, vidro e superfícies, com avenidas arborizadas e logística integrada",
     },
     "rinascimento_logo": {
         "label_pt": "Marca do Rinascimento Design District",
