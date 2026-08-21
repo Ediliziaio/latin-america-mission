@@ -249,6 +249,28 @@ def doc_card_html(t):
     )
 
 
+def eco_html(t):
+    """Blocco 'ecosistema connesso all'Europa': testo + operatori europei."""
+    ops = "".join(
+        '<div class="eco-op"><span class="eco-flag">{fl}</span>'
+        "<b>{nm}</b><small>{role}</small></div>".format(fl=fl, nm=nm, role=role)
+        for nm, fl, role in t["eco_ops"])
+    paras = "".join("<p>{}</p>".format(x) for x in t["eco_p"])
+    return (
+        '<div class="eco reveal">'
+        '<div class="eco-copy"><p class="eyebrow">{eb}</p><h3>{h3}</h3>{paras}</div>'
+        '<div class="eco-ops">{ops}</div>'
+        "</div>"
+    ).format(eb=t["eco_eyebrow"], h3=t["eco_h3"], paras=paras, ops=ops)
+
+
+def prog_img_html(t):
+    """Infografica del programma. Testo impresso in italiano: solo pagina IT."""
+    if t["lang"] not in DATA_CARDS_LANGS:
+        return ""
+    return figure("programma_lam", t, cls="prog-cover reveal")
+
+
 def nav_html(t, assets):
     items = "".join(
         '<a href="{}">{}</a>'.format(h, l) for h, l in t["nav"]
@@ -474,6 +496,7 @@ def render(t, css, js):
       <p class="pecem-lbl">{pecem_pillars_lbl}</p>
       <div class="pecem-pillars">{pecem_pillars}</div>
     </div>
+    {eco_block}
     {data_cards}
     {doc_card}
   </div>
@@ -553,6 +576,7 @@ def render(t, css, js):
       <h2>{prog_h2}</h2>
       <p class="lede">{prog_lede}</p>
     </div>
+    {prog_img}
     <div class="prog-grid reveal">{programme}</div>
     <div class="callout reveal" style="background:#fff"><p>{prog_note}</p></div>
   </div>
@@ -832,6 +856,8 @@ def render(t, css, js):
         ceara_industria=figure("ceara_industria", t, cls="duo-item"),
         rin_img=img("rinascimento", t, dark=True),
         rin_logo=rinascimento_logo(t),
+        eco_block=eco_html(t),
+        prog_img=prog_img_html(t),
         data_cards=data_cards_html(t),
         doc_card=doc_card_html(t),
         gallery="".join(

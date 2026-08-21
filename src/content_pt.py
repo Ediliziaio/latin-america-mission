@@ -98,6 +98,19 @@ PT = {
         ("ZPE Ceará", "Incentivos fiscais e segurança jurídica para a exportação."),
     ],
 
+    # ---- ecossistema já conectado à Europa ----
+    "eco_eyebrow": "Presença europeia",
+    "eco_h3": "Um ecossistema já conectado à Europa",
+    "eco_p": [
+        "O Ceará já está fortemente conectado à Europa por meio da presença de importantes operadores europeus em suas infraestruturas estratégicas. O Porto do Pecém conta com a parceria estratégica da Port of Rotterdam Authority, enquanto o Aeroporto Internacional de Fortaleza é administrado pelo grupo alemão Fraport. No setor de energia, a Enel representa ainda uma presença italiana consolidada no território.",
+        "A presença de importantes operadores europeus nas infraestruturas estratégicas do estado reforça o Ceará como plataforma natural para as empresas europeias que olham para o Brasil e para a América Latina.",
+    ],
+    "eco_ops": [
+        ("Port of Rotterdam", "🇳🇱", "Parceira estratégica do Porto do Pecém"),
+        ("Fraport", "🇩🇪", "Administradora do Aeroporto Internacional de Fortaleza"),
+        ("Enel", "🇮🇹", "Presença italiana consolidada no setor de energia"),
+    ],
+
     # ---- setores ----
     "data_lbl": "O Ceará em síntese",
     "data_note": "Cartões elaborados pelo Governo do Estado do Ceará. Fontes: ADECE, IPECE, Complexo do Pecém.",
@@ -185,7 +198,7 @@ PT = {
         ("03", "Apresentação do Rinascimento", "O Rinascimento Design District, seu modelo de desenvolvimento e as oportunidades de cooperação, internacionalização e instalação produtiva."),
         ("04", "Networking institucional", "Momentos de relacionamento entre empresários italianos, instituições brasileiras e stakeholders locais."),
     ],
-    "prog_note": "A programação definitiva, com horários e locais, é compartilhada com as empresas confirmadas antes do embarque.",
+    "prog_note": "A programação definitiva e os encontros personalizados serão definidos de acordo com o perfil de cada empresa e comunicados até 15 dias antes do início da Missão.",
 
     # ---- parceiros ----
     "part_eyebrow": "Parceiros locais",
@@ -437,6 +450,10 @@ IMAGES_PT = {
     "dato_crescita_pil": {
         "label_pt": "Cartão de dados — crescimento do PIB",
         "alt_pt": "Cartão: crescimento do PIB do Ceará",
+    },
+    "programma_lam": {
+        "label_pt": "Programação da missão, dia a dia",
+        "alt_pt": "Programação da Latin America Mission, 16-20 de novembro de 2026, dia a dia",
     },
     "promoter": {
         "label_pt": "Retrato — Armando Rossi ou equipe do escritório",

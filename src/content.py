@@ -232,11 +232,11 @@ IMAGES = {
     # filtro di lingua in build.py (DATA_CARDS).
     # ---------------------------------------------------------------------
     "dato_hub_portuale": {
-        "file": "dato-hub-portuale.webp", "w": 1200, "h": 800, "silent": True,
+        "file": "dato-hub-portuale.webp", "w": 1500, "h": 1000, "silent": True,
         "label_it": "Scheda dati — hub portuale e Free Trade Zone",
         "label_en": "Data card — port hub and Free Trade Zone",
-        "alt_it": "Scheda: hub portuale e Free Trade Zone del Ceará — prima zona franca operativa in Brasile, libertà di cambio, terreni a basso costo, vantaggi fiscali e vent'anni di sicurezza giuridica",
-        "alt_en": "Card: Ceará port hub and Free Trade Zone",
+        "alt_it": "Scheda: hub portuale e Free Trade Zone del Ceará — prima zona franca operativa in Brasile, libertà di cambio, terreni a basso costo, vantaggi fiscali e vent'anni di sicurezza giuridica; operatori europei presenti: Port of Rotterdam Authority, Fraport ed Enel",
+        "alt_en": "Card: Ceará port hub and Free Trade Zone, with European operators Port of Rotterdam, Fraport and Enel",
     },
     "dato_energie_rinnovabili": {
         "file": "dato-energie-rinnovabili.webp", "w": 1200, "h": 857, "silent": True,
@@ -258,6 +258,16 @@ IMAGES = {
         "label_en": "Data card — GDP growth",
         "alt_it": "Scheda: crescita del PIL del Ceará al 48,76% contro il 42,51% del Brasile nel periodo 2007-2024, fonte ADECE e IPECE",
         "alt_en": "Card: Ceará GDP growth",
+    },
+
+    # Infografica del programma, giorno per giorno. Testo in italiano impresso
+    # nell'immagine: come le schede dati, compare solo sulla pagina IT.
+    "programma_lam": {
+        "file": "programma-lam.webp", "w": 933, "h": 1400, "silent": True,
+        "label_it": "Programma della missione, giorno per giorno",
+        "label_en": "Mission programme, day by day",
+        "alt_it": "Programma Latin America Mission, 16-20 novembre 2026: lunedì Welcome e incontro con il Governo del Ceará (SDE), martedì Industria e Rinascimento Design District con la FIEC, mercoledì visita al Complesso Industriale e Portuale di Pecém e alla ZPE Ceará, giovedì Business Day con incontri B2B, venerdì Sistema Italia",
+        "alt_en": "Latin America Mission programme, 16-20 November 2026, day by day",
     },
 }
 
@@ -362,6 +372,19 @@ IT = {
         ("FTZ Ceará", "Incentivi fiscali e sicurezza giuridica per l'esportazione."),
     ],
 
+    # ---- ecosistema già connesso all'Europa ----
+    "eco_eyebrow": "Presenza europea",
+    "eco_h3": "Un ecosistema già connesso all'Europa",
+    "eco_p": [
+        "Il Ceará è già fortemente connesso all'Europa attraverso la presenza di importanti operatori europei nelle sue infrastrutture strategiche. Il Porto di Pecém conta sulla partnership strategica della Port of Rotterdam Authority, mentre l'Aeroporto Internazionale di Fortaleza è gestito dal gruppo tedesco Fraport. Nel settore energetico, Enel rappresenta inoltre una presenza italiana consolidata sul territorio.",
+        "La presenza di importanti operatori europei nelle infrastrutture strategiche dello Stato rafforza il Ceará come piattaforma naturale per le imprese europee che guardano al Brasile e all'America Latina.",
+    ],
+    "eco_ops": [
+        ("Port of Rotterdam", "🇳🇱", "Partner strategico del Porto di Pecém"),
+        ("Fraport", "🇩🇪", "Gestore dell'Aeroporto Internazionale di Fortaleza"),
+        ("Enel", "🇮🇹", "Presenza italiana consolidata nel settore energetico"),
+    ],
+
     # ---- schede dati (solo IT: le infografiche hanno il testo in italiano) ----
     "data_lbl": "Il Ceará in sintesi",
     "data_note": "Schede a cura del Governo dello Stato del Ceará. Fonti: ADECE, IPECE, Complexo do Pecém.",
@@ -451,7 +474,7 @@ IT = {
         ("03", "Presentazione del Rinascimento", "Il Rinascimento Design District, il suo modello di sviluppo e le opportunità di collaborazione, internazionalizzazione e insediamento produttivo."),
         ("04", "Networking istituzionale", "Momenti di relazione tra imprenditori italiani, istituzioni brasiliane e stakeholder locali."),
     ],
-    "prog_note": "Il programma definitivo, con orari e sedi, viene condiviso con le imprese confermate prima della partenza.",
+    "prog_note": "Il programma definitivo e gli incontri personalizzati saranno definiti in funzione del profilo di ciascuna azienda e comunicati entro 15 giorni dall'inizio della Missione.",
 
     # ---- partners ----
     "part_eyebrow": "Partner locali",
@@ -685,6 +708,18 @@ EN = {
         ("FTZ Ceará", "Tax incentives and legal certainty for exports."),
     ],
 
+    "eco_eyebrow": "European presence",
+    "eco_h3": "An ecosystem already connected to Europe",
+    "eco_p": [
+        "Ceará is already strongly connected to Europe through the presence of major European operators in its strategic infrastructure. The Port of Pecém relies on the strategic partnership of the Port of Rotterdam Authority, while Fortaleza International Airport is managed by the German group Fraport. In the energy sector, Enel is a well-established Italian presence in the territory.",
+        "The presence of major European operators in the state's strategic infrastructure strengthens Ceará as a natural platform for European companies looking to Brazil and Latin America.",
+    ],
+    "eco_ops": [
+        ("Port of Rotterdam", "🇳🇱", "Strategic partner of the Port of Pecém"),
+        ("Fraport", "🇩🇪", "Operator of Fortaleza International Airport"),
+        ("Enel", "🇮🇹", "Well-established Italian presence in the energy sector"),
+    ],
+
     "data_lbl": "Ceará at a glance",
     "data_note": "Cards produced by the Government of the State of Ceará. Sources: ADECE, IPECE, Complexo do Pecém.",
 
@@ -768,7 +803,7 @@ EN = {
         ("03", "Rinascimento presentation", "The Rinascimento Design District, its development model and the opportunities for collaboration, internationalisation and productive settlement."),
         ("04", "Institutional networking", "Moments of relationship-building between Italian entrepreneurs, Brazilian institutions and local stakeholders."),
     ],
-    "prog_note": "The final programme, with times and venues, is shared with confirmed companies before departure.",
+    "prog_note": "The final programme and the personalised meetings will be defined according to each company's profile and communicated within 15 days of the start of the Mission.",
 
     "part_eyebrow": "Local partners",
     "part_h2": "An industrial ecosystem already engaged",

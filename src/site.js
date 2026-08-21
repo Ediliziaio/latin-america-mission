@@ -154,7 +154,7 @@
     var lbImg = document.getElementById('lbImg');
     var lbCap = document.getElementById('lbCap');
     // anche le schede dati: su mobile il testo impresso e' piccolo, servono a schermo pieno
-    document.querySelectorAll('.gal-item img, .data-card').forEach(function (im) {
+    document.querySelectorAll('.gal-item img, .data-card, .prog-cover img').forEach(function (im) {
       im.addEventListener('click', function () {
         lbImg.src = im.currentSrc || im.src;
         lbImg.alt = im.alt;
