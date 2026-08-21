@@ -366,10 +366,6 @@ def render(t, css, js):
         '<article class="prog-card"><div class="step">{}</div><h3>{}</h3><p>{}</p></article>'.format(s, h, d)
         for s, h, d in t["programme"]
     )
-    unions = "".join(
-        '<div class="part-item"><span class="tag">{}</span><span class="desc">{}</span></div>'.format(k, v)
-        for k, v in t["unions"]
-    )
     bodies = "".join(
         '<div class="part-item"><span class="tag">{}</span><span class="desc">{}</span></div>'.format(k, v)
         for k, v in t["bodies"]
@@ -626,14 +622,11 @@ def render(t, css, js):
     </div>
     <div class="part-wrap reveal">
       <div class="part-col">
-        <h3>{part_col1_h3}</h3>
-        <p class="sub">{part_col1_sub}</p>
-        <div class="part-list">{unions}</div>
-      </div>
-      <div class="part-col">
         <h3>{part_col2_h3}</h3>
         <p class="sub">{part_col2_sub}</p>
         <div class="part-list">{bodies}</div>
+      </div>
+      <div class="part-col">
         <div class="inst-box">
           <p class="eyebrow on-dark">{inst_eyebrow}</p>
           <p>{inst_p}</p>
@@ -862,7 +855,6 @@ def render(t, css, js):
         prog_eyebrow=t["prog_eyebrow"], prog_h2=t["prog_h2"], prog_lede=t["prog_lede"],
         programme=programme, prog_note=t["prog_note"],
         part_eyebrow=t["part_eyebrow"], part_h2=t["part_h2"], part_lede=t["part_lede"],
-        part_col1_h3=t["part_col1_h3"], part_col1_sub=t["part_col1_sub"], unions=unions,
         part_col2_h3=t["part_col2_h3"], part_col2_sub=t["part_col2_sub"], bodies=bodies,
         inst_eyebrow=t["inst_eyebrow"], inst_p=t["inst_p"],
         faq_eyebrow=t["faq_eyebrow"], faq_h2=t["faq_h2"], faq=faq,

@@ -139,7 +139,7 @@ PT = {
     "val_h2": "O que uma empresa leva de volta",
     "val_lede": "Uma missão só vale a pena se produzir relações que se possam usar na volta. A programação foi construída sobre esse princípio.",
     "values": [
-        ("1", "Uma agenda sob medida", "As reuniões são definidas a partir do perfil da empresa, em articulação com os sindicatos industriais da FIEC: você conversa com contrapartes pertinentes, não com uma plateia genérica."),
+        ("1", "Uma agenda sob medida", "As reuniões são definidas a partir do perfil da empresa, em articulação com as associações de categoria e os parceiros locais: você conversa com contrapartes pertinentes, não com uma plateia genérica."),
         ("2", "Acesso direto às instituições", "Governo do Estado, FIEC, Câmara Ítalo-Brasileira e Sistema Italia participam da missão: interlocutores que decidem, na mesma sala."),
         ("3", "Visitas técnicas", "Porto do Pecém, ZPE Ceará e infraestrutura industrial são visitados para avaliar custo, prazo e viabilidade de uma instalação ou de um fornecimento."),
         ("4", "Uma plataforma já mapeada", "O Rinascimento Design District oferece um caminho de entrada já estruturado para quem avalia produção, showroom ou distribuição no Brasil."),
@@ -216,17 +216,7 @@ PT = {
     # ---- parceiros ----
     "part_eyebrow": "Parceiros locais",
     "part_h2": "Um ecossistema industrial já envolvido",
-    "part_lede": "Em preparação ao Acordo de Cooperação com o Governo do Ceará, a missão envolve os principais sindicatos industriais da FIEC ligados aos setores foco, junto com as entidades de inovação e formação.",
-    "part_col1_h3": "Sindicatos industriais da FIEC",
-    "part_col1_sub": "Federação das Indústrias do Estado do Ceará",
-    "unions": [
-        ("SindMóveis", "Móveis, cozinhas, mobiliário contract e interior design."),
-        ("SIMAGRAN", "Rochas ornamentais, mármores, granitos e quartzitos."),
-        ("SindCerâmica", "Cerâmica, porcelanato, superfícies, vidro e materiais para arquitetura."),
-        ("Sinduscon-CE", "Construção civil e sistemas construtivos."),
-        ("SindSerrarias", "Madeira, painéis, marcenaria industrial e produtos derivados."),
-        ("SIMEC", "Metalurgia, mecânica, alumínio, esquadrias, automação e equipamentos industriais."),
-    ],
+    "part_lede": "Em preparação ao Acordo de Cooperação com o Governo do Ceará, a missão envolve as entidades da FIEC de inovação e formação ligadas aos setores foco.",
     "part_col2_h3": "Inovação e formação",
     "part_col2_sub": "Entidades de pesquisa, desenvolvimento e formação profissional",
     "bodies": [
@@ -249,7 +239,7 @@ PT = {
         ("A missão é só para design e mobiliário?",
          "Não. Design, mobiliário e materiais têm uma trilha dedicada por meio do Rinascimento Design District, mas a missão é multissetorial e inclui energia, logística e infraestrutura, máquinas e equipamentos, tecnologias digitais, agroalimentar e manufatura avançada."),
         ("Que tipo de rodadas de negócios estão previstas?",
-         "Reuniões com empresas, sindicatos industriais da FIEC, parceiros locais e instituições, selecionados pelo perfil de cada empresa participante. Por isso a agenda é montada nas semanas anteriores ao embarque: inscrever-se cedo melhora a qualidade dos encontros."),
+         "Reuniões com empresas, associações de categoria, parceiros locais e instituições, selecionados pelo perfil de cada empresa participante. Por isso a agenda é montada nas semanas anteriores ao embarque: inscrever-se cedo melhora a qualidade dos encontros."),
         ("Qual é o papel das instituições brasileiras?",
          "A missão ocorre com o apoio institucional do Governo do Estado do Ceará, da FIEC, da Câmara Ítalo-Brasileira de Comércio e Indústria e do Sistema Italia, em preparação ao Acordo de Cooperação com o Governo do Ceará."),
         ("O que é o Rinascimento Design District?",
