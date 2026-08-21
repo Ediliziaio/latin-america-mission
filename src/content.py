@@ -269,6 +269,14 @@ IMAGES = {
         "alt_it": "Programma Latin America Mission, 16-20 novembre 2026: lunedì Welcome e incontro con il Governo del Ceará (SDE), martedì Industria e Rinascimento Design District con la FIEC, mercoledì visita al Complesso Industriale e Portuale di Pecém e alla ZPE Ceará, giovedì Business Day con incontri B2B, venerdì Sistema Italia",
         "alt_en": "Latin America Mission programme, 16-20 November 2026, day by day",
     },
+    # logo SIMEST, mostrato nella sezione finanza agevolata (su targhetta bianca)
+    "simest": {
+        "file": "simest-logo.webp", "w": 600, "h": 288, "silent": True,
+        "label_it": "Logo SIMEST — Gruppo CDP",
+        "label_en": "SIMEST logo — CDP Group",
+        "alt_it": "SIMEST — Gruppo CDP",
+        "alt_en": "SIMEST — CDP Group",
+    },
 }
 
 
@@ -486,6 +494,7 @@ IT = {
         ("A chi si rivolge", "Le imprese in possesso dei requisiti previsti dagli strumenti SIMEST."),
         ("Il nostro ruolo", "Vi affianchiamo, insieme al nostro consulente di finanza agevolata, nell'analisi di fattibilità e nella predisposizione della domanda."),
     ],
+    "fin_logo_lbl": "Strumenti gestiti da",
     "fin_note": "Le informazioni hanno carattere illustrativo e non costituiscono garanzia di ottenimento delle agevolazioni, che restano subordinate alla valutazione di SIMEST e alla normativa pro tempore vigente.",
 
     # ---- partners ----
@@ -826,6 +835,7 @@ EN = {
         ("Who it is for", "Companies that meet the requirements set out by the SIMEST instruments."),
         ("Our role", "We support you, together with our subsidised-finance consultant, in the feasibility analysis and in preparing the application."),
     ],
+    "fin_logo_lbl": "Instruments managed by",
     "fin_note": "This information is illustrative and does not constitute a guarantee that the incentives will be obtained, which remains subject to SIMEST's assessment and to the legislation in force at the time.",
 
     "part_eyebrow": "Local partners",

@@ -210,6 +210,7 @@ PT = {
         ("A quem se destina", "As empresas que possuem os requisitos previstos pelos instrumentos da SIMEST."),
         ("O nosso papel", "Acompanhamos vocês, junto com o nosso consultor de finanças facilitadas, na análise de viabilidade e na preparação do pedido."),
     ],
+    "fin_logo_lbl": "Instrumentos geridos pela",
     "fin_note": "As informações têm caráter ilustrativo e não constituem garantia de obtenção dos benefícios, que permanecem sujeitos à avaliação da SIMEST e à legislação vigente.",
 
     # ---- parceiros ----
@@ -466,6 +467,10 @@ IMAGES_PT = {
     "programma_lam": {
         "label_pt": "Programação da missão, dia a dia",
         "alt_pt": "Programação da Latin America Mission, 16-20 de novembro de 2026, dia a dia",
+    },
+    "simest": {
+        "label_pt": "Logo SIMEST — Grupo CDP",
+        "alt_pt": "SIMEST — Grupo CDP",
     },
     "promoter": {
         "label_pt": "Retrato — Armando Rossi ou equipe do escritório",

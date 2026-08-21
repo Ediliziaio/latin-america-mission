@@ -271,6 +271,19 @@ def fin_points_html(t):
         for lbl, txt in t["fin_points"])
 
 
+def fin_logo_html(t):
+    """Logo SIMEST su targhetta bianca; sparisce se il file non c'e'."""
+    logo = img("simest", t, cls="fin-logo-img")
+    if not logo:
+        return ""
+    return (
+        '<div class="fin-logo reveal">'
+        '<span class="fin-logo-lbl">{lbl}</span>'
+        '<span class="fin-logo-chip">{logo}</span>'
+        "</div>"
+    ).format(lbl=t["fin_logo_lbl"], logo=logo)
+
+
 def prog_img_html(t):
     """Infografica del programma. Testo impresso in italiano: solo pagina IT."""
     if t["lang"] not in DATA_CARDS_LANGS:
@@ -598,6 +611,7 @@ def render(t, css, js):
       <p class="fin-lede">{fin_p}</p>
     </div>
     <div class="fin-grid reveal">{fin_points}</div>
+    {fin_logo}
     <p class="fin-note reveal">{fin_note}</p>
   </div>
 </section>
@@ -879,7 +893,7 @@ def render(t, css, js):
         eco_block=eco_html(t),
         prog_img=prog_img_html(t),
         fin_eyebrow=t["fin_eyebrow"], fin_h2=t["fin_h2"], fin_p=t["fin_p"],
-        fin_points=fin_points_html(t), fin_note=t["fin_note"],
+        fin_points=fin_points_html(t), fin_logo=fin_logo_html(t), fin_note=t["fin_note"],
         data_cards=data_cards_html(t),
         doc_card=doc_card_html(t),
         gallery="".join(
