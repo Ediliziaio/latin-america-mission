@@ -327,9 +327,10 @@ IT = {
     "mission_eyebrow": "La missione",
     "mission_h2": "Un ponte industriale tra Europa e America Latina",
     "mission_p": [
-        "Sono aperte le adesioni alla <strong>Latin America Mission</strong>, la missione imprenditoriale promossa dallo Studio Armando Rossi &amp; Partners con la partecipazione di <strong>Italink</strong> e il supporto istituzionale del Governo dello Stato del Ceará, della FIEC – Federazione delle Industrie dello Stato del Ceará, della Camera Italo-Brasiliana di Commercio e Industria e del Sistema Italia.",
-        "L'obiettivo è aprire opportunità reali di <strong>internazionalizzazione, export e partnership industriali</strong>. Non una delegazione di rappresentanza: un programma di lavoro con incontri B2B costruiti sul profilo di ogni impresa partecipante, visite tecniche alle infrastrutture strategiche del territorio e tavoli diretti con le istituzioni che quelle infrastrutture le decidono.",
-        "Un'attenzione particolare è dedicata alle filiere del <strong>design, arredamento, pietre naturali, superfici, materiali, interni e architettura</strong>, con la presentazione del Rinascimento Design District: il nuovo ecosistema che connette industria, materie prime, innovazione e logistica in un unico hub integrato.",
+        "Sono aperte le adesioni alla <strong>Latin America Mission</strong>, promossa dallo Studio Armando Rossi &amp; Partners, con il supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera di Commercio Italo-Brasiliana e del Sistema Italia.",
+        "Una missione imprenditoriale dedicata alle opportunità di <strong>internazionalizzazione, export e partnership industriali</strong> tra Europa e America Latina, con incontri B2B, visite istituzionali e tecniche e attività di networking nei settori energia, logistica e infrastrutture, macchinari e impiantistica, agroalimentare e tecnologie digitali.",
+        "Focus speciale sulle filiere del <strong>design, arredamento, pietre naturali, superfici, materiali, interni e architettura</strong>, con la presentazione del Rinascimento Design District, il nuovo ecosistema internazionale del design che integra industria, materie prime, innovazione e logistica.",
+        "Per le imprese partecipanti è inoltre previsto un supporto nell'individuazione di bandi e strumenti per l'internazionalizzazione, con accesso a finanziamenti agevolati e contributi a fondo perduto.",
     ],
     "fact_h3": "In sintesi",
     "facts": [
@@ -678,9 +679,10 @@ EN = {
     "mission_eyebrow": "The mission",
     "mission_h2": "An industrial bridge between Europe and Latin America",
     "mission_p": [
-        "Applications are open for the <strong>Latin America Mission</strong>, the business mission promoted by Studio Armando Rossi &amp; Partners with the participation of <strong>Italink</strong> and the institutional support of the Government of the State of Ceará, FIEC – the Federation of Industries of the State of Ceará, the Italian-Brazilian Chamber of Commerce and Industry and Sistema Italia.",
-        "The aim is to open real opportunities for <strong>internationalisation, export and industrial partnerships</strong>. This is not a ceremonial delegation: it is a working programme, with B2B meetings built around each participating company's profile, technical visits to the region's strategic infrastructure and direct roundtables with the institutions that decide on it.",
-        "Particular attention is devoted to the supply chains of <strong>design, furniture, natural stone, surfaces, materials, interiors and architecture</strong>, with the presentation of the Rinascimento Design District: the new ecosystem connecting industry, raw materials, innovation and logistics in a single integrated hub.",
+        "Applications are open for the <strong>Latin America Mission</strong>, promoted by Studio Armando Rossi &amp; Partners, with the institutional support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Sistema Italia.",
+        "A business mission dedicated to the opportunities for <strong>internationalisation, export and industrial partnerships</strong> between Europe and Latin America, with B2B meetings, institutional and technical visits and networking activities in the energy, logistics and infrastructure, machinery and plant engineering, agri-food and digital technology sectors.",
+        "A special focus on the supply chains of <strong>design, furniture, natural stone, surfaces, materials, interiors and architecture</strong>, with the presentation of the Rinascimento Design District, the new international design ecosystem that integrates industry, raw materials, innovation and logistics.",
+        "Participating companies are also offered support in identifying calls and instruments for internationalisation, with access to subsidised loans and non-repayable grants.",
     ],
     "fact_h3": "At a glance",
     "facts": [
