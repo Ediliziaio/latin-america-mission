@@ -10,7 +10,7 @@ SITE = {
     "phone_display": "+39 338 611 5394",
     "phone_href": "+393386115394",
     "start_date": "2026-11-16",
-    "end_date": "2026-11-23",
+    "end_date": "2026-11-20",
     "promoter": "Studio Armando Rossi & Partners",
     "city": "Fortaleza",
     "region": "Ceará",
@@ -281,8 +281,8 @@ IT = {
 
     # ---- SEO ----
     "title": "Latin America Mission 2026 | Missione d'impresa in Ceará, Brasile",
-    "meta_desc": "Missione imprenditoriale italiana in Ceará, Brasile, dal 16 al 23 novembre 2026: incontri B2B, visite al Porto di Pecém e Rinascimento Design District.",
-    "og_title": "Latin America Mission 2026 — Ceará, Brasile | 16–23 novembre",
+    "meta_desc": "Missione imprenditoriale italiana in Ceará, Brasile, dal 16 al 20 novembre 2026: incontri B2B, visite al Porto di Pecém e Rinascimento Design District.",
+    "og_title": "Latin America Mission 2026 — Ceará, Brasile | 16–20 novembre",
     "og_desc": "Una settimana di incontri B2B, visite industriali e relazioni istituzionali tra imprese italiane e il sistema produttivo del Ceará. Adesioni aperte.",
     "locale": "it_IT",
 
@@ -306,8 +306,8 @@ IT = {
     "hero_h1_a": "Latin America",
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasile",
-    "hero_dates": "16 – 23 novembre 2026",
-    "hero_sub": "Otto giorni per aprire un percorso di internazionalizzazione concreto tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto di Pecém e alla FTZ, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
+    "hero_dates": "16 – 20 novembre 2026",
+    "hero_sub": "Cinque giorni per aprire un percorso di internazionalizzazione concreto tra l'Europa e l'America Latina: incontri B2B selezionati, visite al Porto di Pecém e alla FTZ, tavoli istituzionali con il Governo dello Stato del Ceará e la FIEC.",
     "hero_cta_1": "Invia la tua adesione",
     "hero_cta_2": "Scopri la missione",
     "hero_meta": [
@@ -334,7 +334,7 @@ IT = {
     "fact_h3": "In sintesi",
     "facts": [
         ("Destinazione", "Ceará, Brasile"),
-        ("Date", "16–23 novembre 2026"),
+        ("Date", "16–20 novembre 2026"),
         ("Promotore", "Studio Armando Rossi &amp; Partners"),
         ("Partecipazione", "Italink"),
         ("Formato", "B2B · Visite · Networking"),
@@ -466,7 +466,7 @@ IT = {
 
     # ---- programme ----
     "prog_eyebrow": "Programma indicativo",
-    "prog_h2": "Come sono organizzati gli otto giorni",
+    "prog_h2": "Come sono organizzati i cinque giorni",
     "prog_lede": "Una settimana di incontri, visite e relazioni istituzionali costruita per produrre risultati verificabili al rientro.",
     "programme": [
         ("01", "Incontri B2B", "Con imprese, associazioni industriali e partner locali dei settori focus della missione, selezionati sul profilo di ciascun partecipante."),
@@ -506,7 +506,7 @@ IT = {
         ("Chi può partecipare alla Latin America Mission?",
          "La missione è aperta a imprese, studi professionali e operatori economici italiani ed europei interessati a export, partnership industriali o insediamento produttivo in Brasile. Non è richiesta una dimensione aziendale minima: contano la pertinenza settoriale e la concretezza dell'obiettivo."),
         ("Quali sono le date e la durata?",
-         "La missione si svolge dal 16 al 23 novembre 2026 nello Stato del Ceará, in Brasile, con base a Fortaleza. Il programma copre otto giorni tra incontri B2B, visite tecniche e appuntamenti istituzionali."),
+         "La missione si svolge dal 16 al 20 novembre 2026 nello Stato del Ceará, in Brasile, con base a Fortaleza. Il programma copre cinque giorni tra incontri B2B, visite tecniche e appuntamenti istituzionali."),
         ("Quanto costa la partecipazione?",
          "I costi di partecipazione, comprensivi dei servizi organizzativi previsti, vengono comunicati insieme al programma dettagliato a seguito della manifestazione di interesse. Viaggio e soggiorno sono indicati separatamente nella proposta."),
         ("La missione è riservata al settore design e arredamento?",
@@ -594,7 +594,7 @@ IT = {
     "countdown_today": "La missione è in corso",
     "ics_label": "Aggiungi al calendario",
     "sticky_cta": "Aderisci alla missione",
-    "sticky_dates": "16–23 nov 2026 · posti limitati",
+    "sticky_dates": "16–20 nov 2026 · posti limitati",
     "top_label": "Torna su",
     "close_label": "Chiudi",
     "zoom_label": "Ingrandisci l'immagine",
@@ -608,7 +608,7 @@ IT = {
     "ct_promoter": "Promotore",
 
     # ---- footer ----
-    "foot_sub": "Ceará · Brasile — 16–23 novembre 2026",
+    "foot_sub": "Ceará · Brasile — 16–20 novembre 2026",
     "foot_p": "Missione imprenditoriale per l'internazionalizzazione, l'export e le partnership industriali tra Europa e America Latina.",
     "foot_nav_h": "Navigazione",
     "foot_ct_h": "Contatti",
@@ -625,8 +625,8 @@ EN = {
     "dir_prefix": "",
 
     "title": "Latin America Mission 2026 | Business mission to Ceará, Brazil",
-    "meta_desc": "Italian business mission to Ceará, Brazil, 16–23 November 2026: B2B meetings, visits to the Port of Pecém and the Rinascimento Design District.",
-    "og_title": "Latin America Mission 2026 — Ceará, Brazil | 16–23 November",
+    "meta_desc": "Italian business mission to Ceará, Brazil, 16–20 November 2026: B2B meetings, visits to the Port of Pecém and the Rinascimento Design District.",
+    "og_title": "Latin America Mission 2026 — Ceará, Brazil | 16–20 November",
     "og_desc": "A week of B2B meetings, industrial visits and institutional relations between Italian companies and the productive system of Ceará. Applications open.",
     "locale": "en_GB",
 
@@ -648,8 +648,8 @@ EN = {
     "hero_h1_a": "Latin America",
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brazil",
-    "hero_dates": "16 – 23 November 2026",
-    "hero_sub": "Eight days to open a concrete internationalisation pathway between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the FTZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
+    "hero_dates": "16 – 20 November 2026",
+    "hero_sub": "Five days to open a concrete internationalisation pathway between Europe and Latin America: selected B2B meetings, visits to the Port of Pecém and the FTZ, institutional roundtables with the Government of the State of Ceará and FIEC.",
     "hero_cta_1": "Submit your application",
     "hero_cta_2": "Discover the mission",
     "hero_meta": [
@@ -674,7 +674,7 @@ EN = {
     "fact_h3": "At a glance",
     "facts": [
         ("Destination", "Ceará, Brazil"),
-        ("Dates", "16–23 November 2026"),
+        ("Dates", "16–20 November 2026"),
         ("Promoter", "Studio Armando Rossi &amp; Partners"),
         ("Participation", "Italink"),
         ("Format", "B2B · Visits · Networking"),
@@ -795,7 +795,7 @@ EN = {
     "fair_p": "A Rinascimento Fair is being planned near Fortaleza, dedicated to the design, materials and advanced manufacturing supply chains.",
 
     "prog_eyebrow": "Indicative programme",
-    "prog_h2": "How the eight days are organised",
+    "prog_h2": "How the five days are organised",
     "prog_lede": "A week of meetings, visits and institutional relations designed to produce results you can verify on your return.",
     "programme": [
         ("01", "B2B meetings", "With companies, industrial associations and local partners in the mission's focus sectors, selected on each participant's profile."),
@@ -833,7 +833,7 @@ EN = {
         ("Who can take part in the Latin America Mission?",
          "The mission is open to Italian and European companies, professional firms and economic operators interested in export, industrial partnerships or productive settlement in Brazil. There is no minimum company size: what counts is sector relevance and a concrete objective."),
         ("What are the dates and duration?",
-         "The mission runs from 16 to 23 November 2026 in the State of Ceará, Brazil, based in Fortaleza. The programme covers eight days of B2B meetings, technical visits and institutional appointments."),
+         "The mission runs from 16 to 20 November 2026 in the State of Ceará, Brazil, based in Fortaleza. The programme covers five days of B2B meetings, technical visits and institutional appointments."),
         ("How much does participation cost?",
          "Participation costs, including the organisational services provided, are communicated together with the detailed programme following your expression of interest. Travel and accommodation are indicated separately in the proposal."),
         ("Is the mission reserved for design and furniture?",
@@ -920,7 +920,7 @@ EN = {
     "countdown_today": "The mission is under way",
     "ics_label": "Add to calendar",
     "sticky_cta": "Apply to the mission",
-    "sticky_dates": "16–23 Nov 2026 · limited places",
+    "sticky_dates": "16–20 Nov 2026 · limited places",
     "top_label": "Back to top",
     "close_label": "Close",
     "zoom_label": "Enlarge image",
@@ -932,7 +932,7 @@ EN = {
     "ct_phone": "Phone",
     "ct_promoter": "Promoter",
 
-    "foot_sub": "Ceará · Brazil — 16–23 November 2026",
+    "foot_sub": "Ceará · Brazil — 16–20 November 2026",
     "foot_p": "Business mission for internationalisation, export and industrial partnerships between Europe and Latin America.",
     "foot_nav_h": "Navigation",
     "foot_ct_h": "Contacts",

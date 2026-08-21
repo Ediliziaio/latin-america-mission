@@ -959,13 +959,13 @@ Sitemap: {base}/sitemap.xml
     it = LANGS[0]
     llms = """# Latin America Mission — Ceará, Brasile
 
-> Missione imprenditoriale italiana nello Stato del Ceará (Brasile), 16–23 novembre 2026.
+> Missione imprenditoriale italiana nello Stato del Ceará (Brasile), 16–20 novembre 2026.
 > Promossa dallo Studio Armando Rossi & Partners con la partecipazione di Italink e il
 > supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera
 > Italo-Brasiliana di Commercio e Industria e del Sistema Italia.
 
 ## In breve
-- Date: 16–23 novembre 2026
+- Date: 16–20 novembre 2026
 - Luogo: Fortaleza, Stato del Ceará, Brasile
 - Formato: incontri B2B, visite istituzionali e tecniche (Porto di Pecém, FTZ Ceará), networking
 - Settori della missione: {sectors}

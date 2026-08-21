@@ -10,8 +10,8 @@ PT = {
 
     # ---- SEO ----
     "title": "Latin America Mission 2026 | Missão empresarial no Ceará",
-    "meta_desc": "Missão empresarial italiana no Ceará, de 16 a 23 de novembro de 2026: rodadas de negócios, visitas ao Porto do Pecém e ao Rinascimento Design District.",
-    "og_title": "Latin America Mission 2026 — Ceará, Brasil | 16 a 23 de novembro",
+    "meta_desc": "Missão empresarial italiana no Ceará, de 16 a 20 de novembro de 2026: rodadas de negócios, visitas ao Porto do Pecém e ao Rinascimento Design District.",
+    "og_title": "Latin America Mission 2026 — Ceará, Brasil | 16 a 20 de novembro",
     "og_desc": "Uma semana de rodadas de negócios, visitas industriais e relações institucionais entre empresas italianas e o sistema produtivo do Ceará. Inscrições abertas.",
     "locale": "pt_BR",
 
@@ -35,8 +35,8 @@ PT = {
     "hero_h1_a": "Latin America",
     "hero_h1_b": "Mission",
     "hero_place": "Ceará, Brasil",
-    "hero_dates": "16 – 23 de novembro de 2026",
-    "hero_sub": "Oito dias para abrir um caminho concreto de internacionalização entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
+    "hero_dates": "16 – 20 de novembro de 2026",
+    "hero_sub": "Cinco dias para abrir um caminho concreto de internacionalização entre a Europa e a América Latina: rodadas de negócios selecionadas, visitas ao Porto do Pecém e à ZPE, mesas institucionais com o Governo do Estado do Ceará e a FIEC.",
     "hero_cta_1": "Envie sua inscrição",
     "hero_cta_2": "Conheça a missão",
     "hero_meta": [
@@ -63,7 +63,7 @@ PT = {
     "fact_h3": "Em resumo",
     "facts": [
         ("Destino", "Ceará, Brasil"),
-        ("Datas", "16 a 23 de novembro de 2026"),
+        ("Datas", "16 a 20 de novembro de 2026"),
         ("Promotor", "Studio Armando Rossi &amp; Partners"),
         ("Participação", "Italink"),
         ("Formato", "Rodadas · Visitas · Networking"),
@@ -190,7 +190,7 @@ PT = {
 
     # ---- programação ----
     "prog_eyebrow": "Programação indicativa",
-    "prog_h2": "Como são organizados os oito dias",
+    "prog_h2": "Como são organizados os cinco dias",
     "prog_lede": "Uma semana de reuniões, visitas e relações institucionais desenhada para produzir resultados verificáveis na volta.",
     "programme": [
         ("01", "Rodadas de negócios", "Com empresas, associações industriais e parceiros locais dos setores foco da missão, selecionados pelo perfil de cada participante."),
@@ -230,7 +230,7 @@ PT = {
         ("Quem pode participar da Latin America Mission?",
          "A missão é aberta a empresas, escritórios profissionais e operadores econômicos italianos e europeus interessados em exportação, parcerias industriais ou instalação produtiva no Brasil. Não há porte mínimo: o que conta é a aderência setorial e um objetivo concreto."),
         ("Quais são as datas e a duração?",
-         "A missão acontece de 16 a 23 de novembro de 2026 no Estado do Ceará, com base em Fortaleza. A programação cobre oito dias entre rodadas de negócios, visitas técnicas e compromissos institucionais."),
+         "A missão acontece de 16 a 20 de novembro de 2026 no Estado do Ceará, com base em Fortaleza. A programação cobre cinco dias entre rodadas de negócios, visitas técnicas e compromissos institucionais."),
         ("Quanto custa participar?",
          "Os custos de participação, incluindo os serviços organizacionais previstos, são informados junto com a programação detalhada após a manifestação de interesse. Passagens e hospedagem são indicadas separadamente na proposta."),
         ("A missão é só para design e mobiliário?",
@@ -318,7 +318,7 @@ PT = {
     "countdown_today": "A missão está acontecendo",
     "ics_label": "Adicionar ao calendário",
     "sticky_cta": "Inscreva-se na missão",
-    "sticky_dates": "16 a 23 de nov. de 2026 · vagas limitadas",
+    "sticky_dates": "16 a 20 de nov. de 2026 · vagas limitadas",
     "top_label": "Voltar ao topo",
     "close_label": "Fechar",
     "zoom_label": "Ampliar a imagem",
@@ -332,7 +332,7 @@ PT = {
     "ct_promoter": "Promotor",
 
     # ---- rodapé ----
-    "foot_sub": "Ceará · Brasil — 16 a 23 de novembro de 2026",
+    "foot_sub": "Ceará · Brasil — 16 a 20 de novembro de 2026",
     "foot_p": "Missão empresarial para internacionalização, exportação e parcerias industriais entre a Europa e a América Latina.",
     "foot_nav_h": "Navegação",
     "foot_ct_h": "Contato",
