@@ -264,6 +264,13 @@ def eco_html(t):
     ).format(eb=t["eco_eyebrow"], h3=t["eco_h3"], paras=paras, ops=ops)
 
 
+def fin_points_html(t):
+    """Tre punti del blocco finanza agevolata: etichetta + testo."""
+    return "".join(
+        '<div class="fin-card"><h3>{lbl}</h3><p>{txt}</p></div>'.format(lbl=lbl, txt=txt)
+        for lbl, txt in t["fin_points"])
+
+
 def prog_img_html(t):
     """Infografica del programma. Testo impresso in italiano: solo pagina IT."""
     if t["lang"] not in DATA_CARDS_LANGS:
@@ -582,6 +589,19 @@ def render(t, css, js):
   </div>
 </section>
 
+<section id="finanza" class="bg-ink">
+  <div class="wrap">
+    <div class="fin-head reveal">
+      <p class="eyebrow on-dark">{fin_eyebrow}</p>
+      <div class="rule"></div>
+      <h2 class="fin-h2">{fin_h2}</h2>
+      <p class="fin-lede">{fin_p}</p>
+    </div>
+    <div class="fin-grid reveal">{fin_points}</div>
+    <p class="fin-note reveal">{fin_note}</p>
+  </div>
+</section>
+
 <section id="partner">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -858,6 +878,8 @@ def render(t, css, js):
         rin_logo=rinascimento_logo(t),
         eco_block=eco_html(t),
         prog_img=prog_img_html(t),
+        fin_eyebrow=t["fin_eyebrow"], fin_h2=t["fin_h2"], fin_p=t["fin_p"],
+        fin_points=fin_points_html(t), fin_note=t["fin_note"],
         data_cards=data_cards_html(t),
         doc_card=doc_card_html(t),
         gallery="".join(
@@ -970,6 +992,7 @@ Sitemap: {base}/sitemap.xml
 - Formato: incontri B2B, visite istituzionali e tecniche (Porto di Pecém, FTZ Ceará), networking
 - Settori della missione: {sectors}
 - Progetto di punta presentato: Rinascimento Design District, con le filiere di {segments}
+- Finanza agevolata: accompagnamento nell'accesso agli strumenti SIMEST (Fondo 394/81) per finanziare la partecipazione a missioni, fiere ed eventi internazionali, con possibile quota a fondo perduto (valutazione caso per caso di SIMEST)
 - Adesioni: aperte fino a esaurimento posti
 - Contatti: {email} · {phone}
 

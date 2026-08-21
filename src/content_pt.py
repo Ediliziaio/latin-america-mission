@@ -200,6 +200,17 @@ PT = {
     ],
     "prog_note": "A programação definitiva e os encontros personalizados serão definidos de acordo com o perfil de cada empresa e comunicados até 15 dias antes do início da Missão.",
 
+    # ---- financiamento facilitado ----
+    "fin_eyebrow": "Financiamento facilitado para a internacionalização",
+    "fin_h2": "Um apoio para financiar a sua participação",
+    "fin_p": "Às empresas participantes oferecemos acompanhamento na identificação dos instrumentos de financiamento facilitado para a internacionalização — em particular os financiamentos com taxa facilitada do Fundo 394/81 gerido pela SIMEST, que podem contribuir para cobrir as despesas de participação em missões, feiras e eventos internacionais, com uma possível parcela a fundo perdido. O acesso aos benefícios e o seu valor são avaliados caso a caso pela SIMEST, em função dos requisitos de cada empresa e das condições vigentes.",
+    "fin_points": [
+        ("O que pode cobrir", "As despesas ligadas à participação em missões, feiras e eventos internacionais (atividades promocionais, organização das rodadas de negócios B2B, consultorias e despesas digitais) e, em perspectiva, os investimentos de instalação nos mercados estrangeiros."),
+        ("A quem se destina", "As empresas que possuem os requisitos previstos pelos instrumentos da SIMEST."),
+        ("O nosso papel", "Acompanhamos vocês, junto com o nosso consultor de finanças facilitadas, na análise de viabilidade e na preparação do pedido."),
+    ],
+    "fin_note": "As informações têm caráter ilustrativo e não constituem garantia de obtenção dos benefícios, que permanecem sujeitos à avaliação da SIMEST e à legislação vigente.",
+
     # ---- parceiros ----
     "part_eyebrow": "Parceiros locais",
     "part_h2": "Um ecossistema industrial já envolvido",

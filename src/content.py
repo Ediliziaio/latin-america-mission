@@ -476,6 +476,17 @@ IT = {
     ],
     "prog_note": "Il programma definitivo e gli incontri personalizzati saranno definiti in funzione del profilo di ciascuna azienda e comunicati entro 15 giorni dall'inizio della Missione.",
 
+    # ---- finanza agevolata ----
+    "fin_eyebrow": "Finanza agevolata per l'internazionalizzazione",
+    "fin_h2": "Un supporto per finanziare la tua partecipazione",
+    "fin_p": "Alle imprese partecipanti offriamo un accompagnamento nell'individuazione degli strumenti di finanza agevolata per l'internazionalizzazione — in particolare i finanziamenti a tasso agevolato del Fondo 394/81 gestito da SIMEST, che possono contribuire a coprire le spese di partecipazione a missioni, fiere ed eventi internazionali, con una possibile quota a fondo perduto. L'accesso alle agevolazioni e la loro entità sono valutati caso per caso da SIMEST, in funzione dei requisiti della singola impresa e delle condizioni vigenti.",
+    "fin_points": [
+        ("Cosa può coprire", "Le spese connesse alla partecipazione a missioni, fiere ed eventi internazionali (attività promozionali, organizzazione degli incontri B2B, consulenze e spese digitali) e, in prospettiva, gli investimenti di insediamento sui mercati esteri."),
+        ("A chi si rivolge", "Le imprese in possesso dei requisiti previsti dagli strumenti SIMEST."),
+        ("Il nostro ruolo", "Vi affianchiamo, insieme al nostro consulente di finanza agevolata, nell'analisi di fattibilità e nella predisposizione della domanda."),
+    ],
+    "fin_note": "Le informazioni hanno carattere illustrativo e non costituiscono garanzia di ottenimento delle agevolazioni, che restano subordinate alla valutazione di SIMEST e alla normativa pro tempore vigente.",
+
     # ---- partners ----
     "part_eyebrow": "Partner locali",
     "part_h2": "Un ecosistema industriale già coinvolto",
@@ -804,6 +815,16 @@ EN = {
         ("04", "Institutional networking", "Moments of relationship-building between Italian entrepreneurs, Brazilian institutions and local stakeholders."),
     ],
     "prog_note": "The final programme and the personalised meetings will be defined according to each company's profile and communicated within 15 days of the start of the Mission.",
+
+    "fin_eyebrow": "Subsidised finance for internationalisation",
+    "fin_h2": "Support to finance your participation",
+    "fin_p": "We assist participating companies in identifying subsidised-finance instruments for internationalisation — in particular the subsidised-rate loans of Fund 394/81 managed by SIMEST, which can help cover the costs of taking part in international missions, trade fairs and events, with a possible non-repayable grant portion. Access to the incentives and their amount are assessed case by case by SIMEST, according to each company's requirements and the conditions in force.",
+    "fin_points": [
+        ("What it can cover", "The costs related to participation in international missions, trade fairs and events (promotional activities, organisation of the B2B meetings, consultancy and digital expenses) and, in the future, establishment investments in foreign markets."),
+        ("Who it is for", "Companies that meet the requirements set out by the SIMEST instruments."),
+        ("Our role", "We support you, together with our subsidised-finance consultant, in the feasibility analysis and in preparing the application."),
+    ],
+    "fin_note": "This information is illustrative and does not constitute a guarantee that the incentives will be obtained, which remains subject to SIMEST's assessment and to the legislation in force at the time.",
 
     "part_eyebrow": "Local partners",
     "part_h2": "An industrial ecosystem already engaged",
