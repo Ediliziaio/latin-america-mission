@@ -48,7 +48,7 @@ PT = {
 
     # ---- supporters ----
     "sup_promoted": "Promovida por",
-    "sup_with": "com a participação da Italink",
+    "sup_with": "",
     "sup_support": "Com o apoio institucional de",
     "sup_text_cards": [("Sistema Italia", "Rede institucional")],
 
@@ -66,7 +66,6 @@ PT = {
         ("Destino", "Ceará, Brasil"),
         ("Datas", "16 a 20 de novembro de 2026"),
         ("Promotor", "Studio Armando Rossi &amp; Partners"),
-        ("Participação", "Italink"),
         ("Formato", "Rodadas · Visitas · Networking"),
     ],
     "fact_support_k": "Apoio institucional",

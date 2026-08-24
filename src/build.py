@@ -468,7 +468,7 @@ def render(t, css, js):
 <section class="supporters" aria-label="{sup_support}">
   <div class="wrap">
     <p class="sup-lbl">{sup_promoted}</p>
-    <p class="sup-promoters"><span>{promoter}</span><span class="with">{sup_with}</span></p>
+    <p class="sup-promoters"><span>{promoter}</span>{sup_with_html}</p>
     <p class="sup-lbl">{sup_support}</p>
     <div class="logo-row">{logos}</div>
   </div>
@@ -824,7 +824,8 @@ def render(t, css, js):
         start=SITE["start_date"], end=SITE["end_date"],
         hero_sub=t["hero_sub"], cta1=t["hero_cta_1"], cta2=t["hero_cta_2"],
         hero_meta=hero_meta, scroll=t["scroll"],
-        sup_promoted=t["sup_promoted"], sup_with=t["sup_with"],
+        sup_promoted=t["sup_promoted"],
+        sup_with_html=('<span class="with">' + t["sup_with"] + "</span>") if t["sup_with"] else "",
         sup_support=t["sup_support"], promoter=SITE["promoter"].replace("&", "&amp;"),
         logos=logos_html(t),
         mission_eyebrow=t["mission_eyebrow"], mission_h2=t["mission_h2"],
@@ -988,8 +989,8 @@ Sitemap: {base}/sitemap.xml
     llms = """# Latin America Mission — Ceará, Brasile
 
 > Missione imprenditoriale italiana nello Stato del Ceará (Brasile), 16–20 novembre 2026.
-> Promossa dallo Studio Armando Rossi & Partners con la partecipazione di Italink e il
-> supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera
+> Promossa dallo Studio Armando Rossi & Partners con il supporto istituzionale del
+> Governo dello Stato del Ceará, della FIEC, della Camera
 > Italo-Brasiliana di Commercio e Industria e del Sistema Italia.
 
 ## In breve

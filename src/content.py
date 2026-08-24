@@ -327,7 +327,7 @@ IT = {
 
     # ---- supporters ----
     "sup_promoted": "Promossa da",
-    "sup_with": "con la partecipazione di Italink",
+    "sup_with": "",
     "sup_support": "Con il supporto istituzionale di",
     "sup_text_cards": [("Sistema Italia", "Rete istituzionale")],
 
@@ -345,7 +345,6 @@ IT = {
         ("Destinazione", "Ceará, Brasile"),
         ("Date", "16–20 novembre 2026"),
         ("Promotore", "Studio Armando Rossi &amp; Partners"),
-        ("Partecipazione", "Italink"),
         ("Formato", "B2B · Visite · Networking"),
     ],
     "fact_support_k": "Supporto istituzionale",
@@ -671,7 +670,7 @@ EN = {
     "scroll": "Scroll",
 
     "sup_promoted": "Promoted by",
-    "sup_with": "with the participation of Italink",
+    "sup_with": "",
     "sup_support": "With the institutional support of",
     "sup_text_cards": [("Sistema Italia", "Institutional network")],
 
@@ -688,7 +687,6 @@ EN = {
         ("Destination", "Ceará, Brazil"),
         ("Dates", "16–20 November 2026"),
         ("Promoter", "Studio Armando Rossi &amp; Partners"),
-        ("Participation", "Italink"),
         ("Format", "B2B · Visits · Networking"),
     ],
     "fact_support_k": "Institutional support",
