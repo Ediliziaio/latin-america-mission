@@ -399,7 +399,7 @@ IMAGES_PT = {
     },
     "gallery_6": {
         "label_pt": "Encontros de trabalho — reunião com os parceiros",
-        "alt_pt": "Reunião de trabalho entre a delegação e os parceiros locais",
+        "alt_pt": "Delegação da missão durante um encontro de trabalho em um escritório com vista para Fortaleza",
         "cap_pt": "Encontros de trabalho",
     },
     "gallery_7": {

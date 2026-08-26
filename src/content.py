@@ -152,11 +152,11 @@ IMAGES = {
         "cap_it": "Fecomércio Ceará", "cap_en": "Fecomércio Ceará",
     },
     "gallery_6": {
-        "file": "gallery-6.webp", "w": 959, "h": 719,
+        "file": "gallery-6.webp", "w": 1200, "h": 900,
         "label_it": "Incontri di lavoro — riunione con i partner",
         "label_en": "Working meetings — session with partners",
-        "alt_it": "Riunione di lavoro tra la delegazione e i partner locali",
-        "alt_en": "Working meeting between the delegation and local partners",
+        "alt_it": "Delegazione della missione durante un incontro di lavoro in un ufficio con vista su Fortaleza",
+        "alt_en": "Mission delegation during a working meeting in an office overlooking Fortaleza",
         "cap_it": "Incontri di lavoro", "cap_en": "Working meetings",
     },
     "gallery_7": {
