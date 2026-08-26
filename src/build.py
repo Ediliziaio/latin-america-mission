@@ -990,8 +990,8 @@ Sitemap: {base}/sitemap.xml
 
 > Missione imprenditoriale italiana nello Stato del Ceará (Brasile), 16–20 novembre 2026.
 > Promossa dallo Studio Armando Rossi & Partners con il supporto istituzionale del
-> Governo dello Stato del Ceará, della FIEC, della Camera
-> Italo-Brasiliana di Commercio e Industria e del Sistema Italia.
+> Governo dello Stato del Ceará, della FIEC, della Camera Italo-Brasiliana di Commercio e Industria
+> di Rio de Janeiro — Delegazione del Ceará e del Sistema Italia.
 
 ## In breve
 - Date: 16–20 novembre 2026

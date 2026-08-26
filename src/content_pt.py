@@ -56,7 +56,7 @@ PT = {
     "mission_eyebrow": "A missão",
     "mission_h2": "Uma ponte industrial entre a Europa e a América Latina",
     "mission_p": [
-        "Estão abertas as inscrições para a <strong>Latin America Mission</strong>, promovida pelo Studio Armando Rossi &amp; Partners, com o apoio institucional do Governo do Estado do Ceará, da FIEC, da Câmara de Comércio Ítalo-Brasileira e do Sistema Italia.",
+        "Estão abertas as inscrições para a <strong>Latin America Mission</strong>, promovida pelo Studio Armando Rossi &amp; Partners, com o apoio institucional do Governo do Estado do Ceará, da FIEC, da Câmara de Comércio Ítalo-Brasileira do Rio de Janeiro (Delegação do Ceará) e do Sistema Italia.",
         "Uma missão empresarial dedicada às oportunidades de <strong>internacionalização, exportação e parcerias industriais</strong> entre a Europa e a América Latina, com rodadas de negócios B2B, visitas institucionais e técnicas e atividades de networking nos setores de energia, logística e infraestrutura, máquinas e equipamentos, agroalimentar e tecnologias digitais.",
         "Foco especial nas cadeias de <strong>design, mobiliário, rochas ornamentais, superfícies, materiais, interiores e arquitetura</strong>, com a apresentação do Rinascimento Design District, o novo ecossistema internacional do design que integra indústria, matérias-primas, inovação e logística.",
         "Para as empresas participantes está ainda previsto apoio na identificação de editais e instrumentos para a internacionalização, com acesso a financiamentos facilitados e contribuições a fundo perdido.",
@@ -69,7 +69,7 @@ PT = {
         ("Formato", "Rodadas · Visitas · Networking"),
     ],
     "fact_support_k": "Apoio institucional",
-    "fact_support_v": "Governo do Estado do Ceará · FIEC – Federação das Indústrias do Estado do Ceará · Câmara Ítalo-Brasileira de Comércio e Indústria · Sistema Italia",
+    "fact_support_v": "Governo do Estado do Ceará · FIEC – Federação das Indústrias do Estado do Ceará · Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro — Delegação do Ceará · Sistema Italia",
     "fact_open_k": "Inscrições",
     "fact_open_v": "Abertas",
 
@@ -139,7 +139,7 @@ PT = {
     "val_lede": "Uma missão só vale a pena se produzir relações que se possam usar na volta. A programação foi construída sobre esse princípio.",
     "values": [
         ("1", "Uma agenda sob medida", "As reuniões são definidas a partir do perfil da empresa, em articulação com as associações de categoria e os parceiros locais: você conversa com contrapartes pertinentes, não com uma plateia genérica."),
-        ("2", "Acesso direto às instituições", "Governo do Estado, FIEC, Câmara Ítalo-Brasileira e Sistema Italia participam da missão: interlocutores que decidem, na mesma sala."),
+        ("2", "Acesso direto às instituições", "Governo do Estado, FIEC, Câmara Ítalo-Brasileira do Rio de Janeiro (Delegação do Ceará) e Sistema Italia participam da missão: interlocutores que decidem, na mesma sala."),
         ("3", "Visitas técnicas", "Porto do Pecém, ZPE Ceará e infraestrutura industrial são visitados para avaliar custo, prazo e viabilidade de uma instalação ou de um fornecimento."),
         ("4", "Uma plataforma já mapeada", "O Rinascimento Design District oferece um caminho de entrada já estruturado para quem avalia produção, showroom ou distribuição no Brasil."),
     ],
@@ -223,7 +223,7 @@ PT = {
         ("SENAI Ceará", "Formação profissional, laboratórios e prototipagem."),
     ],
     "inst_eyebrow": "Apoio institucional",
-    "inst_p": "Governo do Estado do Ceará · FIEC · Câmara Ítalo-Brasileira de Comércio e Indústria · Sistema Italia",
+    "inst_p": "Governo do Estado do Ceará · FIEC · Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro — Delegação do Ceará · Sistema Italia",
 
     # ---- perguntas frequentes ----
     "faq_eyebrow": "Perguntas frequentes",
@@ -240,7 +240,7 @@ PT = {
         ("Que tipo de rodadas de negócios estão previstas?",
          "Reuniões com empresas, associações de categoria, parceiros locais e instituições, selecionados pelo perfil de cada empresa participante. Por isso a agenda é montada nas semanas anteriores ao embarque: inscrever-se cedo melhora a qualidade dos encontros."),
         ("Qual é o papel das instituições brasileiras?",
-         "A missão ocorre com o apoio institucional do Governo do Estado do Ceará, da FIEC, da Câmara Ítalo-Brasileira de Comércio e Indústria e do Sistema Italia, em preparação ao Acordo de Cooperação com o Governo do Ceará."),
+         "A missão ocorre com o apoio institucional do Governo do Estado do Ceará, da FIEC, da Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro — Delegação do Ceará e do Sistema Italia, em preparação ao Acordo de Cooperação com o Governo do Ceará."),
         ("O que é o Rinascimento Design District?",
          "É um ecossistema industrial integrado dedicado a design, materiais, interiores e manufatura avançada: um distrito produtivo que conecta empresas, fornecedores, showrooms, logística, serviços e inovação. É apresentado durante a missão e está aberto a projetos de cooperação, internacionalização e instalação."),
         ("Como me inscrevo e até quando?",
@@ -339,7 +339,7 @@ PT = {
     "foot_nav_h": "Navegação",
     "foot_ct_h": "Contato",
     "foot_copy": "© 2026 Studio Armando Rossi &amp; Partners",
-    "foot_note": "Com o apoio do Governo do Estado do Ceará, da FIEC, da Câmara Ítalo-Brasileira de Comércio e Indústria e do Sistema Italia.",
+    "foot_note": "Com o apoio do Governo do Estado do Ceará, da FIEC, da Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro — Delegação do Ceará e do Sistema Italia.",
     "lang_label": "Idioma",
 }
 

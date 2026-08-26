@@ -39,9 +39,9 @@ LOGOS = [
     {
         "file": "camara-italo-brasileira.webp",
         "w": 214, "h": 200,
-        "alt_it": "Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro",
-        "alt_en": "Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro",
-        "alt_pt": "Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro",
+        "alt_it": "Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro — Delegazione del Ceará",
+        "alt_en": "Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro — Ceará Delegation",
+        "alt_pt": "Câmara Ítalo-Brasileira de Comércio e Indústria do Rio de Janeiro — Delegação do Ceará",
     },
 ]
 
@@ -335,7 +335,7 @@ IT = {
     "mission_eyebrow": "La missione",
     "mission_h2": "Un ponte industriale tra Europa e America Latina",
     "mission_p": [
-        "Sono aperte le adesioni alla <strong>Latin America Mission</strong>, promossa dallo Studio Armando Rossi &amp; Partners, con il supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera di Commercio Italo-Brasiliana e del Sistema Italia.",
+        "Sono aperte le adesioni alla <strong>Latin America Mission</strong>, promossa dallo Studio Armando Rossi &amp; Partners, con il supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera di Commercio Italo-Brasiliana di Rio de Janeiro (Delegazione del Ceará) e del Sistema Italia.",
         "Una missione imprenditoriale dedicata alle opportunità di <strong>internazionalizzazione, export e partnership industriali</strong> tra Europa e America Latina, con incontri B2B, visite istituzionali e tecniche e attività di networking nei settori energia, logistica e infrastrutture, macchinari e impiantistica, agroalimentare e tecnologie digitali.",
         "Focus speciale sulle filiere del <strong>design, arredamento, pietre naturali, superfici, materiali, interni e architettura</strong>, con la presentazione del Rinascimento Design District, il nuovo ecosistema internazionale del design che integra industria, materie prime, innovazione e logistica.",
         "Per le imprese partecipanti è inoltre previsto un supporto nell'individuazione di bandi e strumenti per l'internazionalizzazione, con accesso a finanziamenti agevolati e contributi a fondo perduto.",
@@ -348,7 +348,7 @@ IT = {
         ("Formato", "B2B · Visite · Networking"),
     ],
     "fact_support_k": "Supporto istituzionale",
-    "fact_support_v": "Governo dello Stato del Ceará · FIEC – Federazione delle Industrie dello Stato del Ceará · Camera Italo-Brasiliana di Commercio e Industria · Sistema Italia",
+    "fact_support_v": "Governo dello Stato del Ceará · FIEC – Federazione delle Industrie dello Stato del Ceará · Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro — Delegazione del Ceará · Sistema Italia",
     "fact_open_k": "Adesioni",
     "fact_open_v": "Aperte",
 
@@ -423,7 +423,7 @@ IT = {
     "val_lede": "Una missione ha senso solo se produce relazioni utilizzabili al ritorno. Il programma è costruito su questo principio.",
     "values": [
         ("1", "Un'agenda B2B costruita su misura", "Gli incontri vengono definiti a partire dal profilo dell'impresa, in raccordo con le associazioni di categoria e i partner locali: si parla con controparti pertinenti, non con una platea generica."),
-        ("2", "Accesso diretto alle istituzioni", "Governo dello Stato, FIEC, Camera Italo-Brasiliana e Sistema Italia partecipano alla missione: interlocutori decisionali, nella stessa stanza."),
+        ("2", "Accesso diretto alle istituzioni", "Governo dello Stato, FIEC, Camera Italo-Brasiliana di Rio de Janeiro (Delegazione del Ceará) e Sistema Italia partecipano alla missione: interlocutori decisionali, nella stessa stanza."),
         ("3", "Visite tecniche", "Porto di Pecém, FTZ Ceará e infrastrutture industriali si visitano per valutare costi, tempi e fattibilità di un insediamento o di una fornitura."),
         ("4", "Una piattaforma già mappata", "Il Rinascimento Design District offre un percorso di ingresso già strutturato per chi valuta produzione, showroom o distribuzione in Brasile."),
     ],
@@ -507,7 +507,7 @@ IT = {
         ("SENAI Ceará", "Formazione professionale, laboratori e prototipazione."),
     ],
     "inst_eyebrow": "Supporto istituzionale",
-    "inst_p": "Governo dello Stato del Ceará · FIEC · Camera Italo-Brasiliana di Commercio e Industria · Sistema Italia",
+    "inst_p": "Governo dello Stato del Ceará · FIEC · Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro — Delegazione del Ceará · Sistema Italia",
 
     # ---- faq ----
     "faq_eyebrow": "Domande frequenti",
@@ -524,7 +524,7 @@ IT = {
         ("Che tipo di incontri B2B sono previsti?",
          "Incontri con imprese, associazioni di categoria, partner locali e istituzioni, selezionati sul profilo di ciascuna azienda partecipante. Per questo l'agenda si costruisce nelle settimane precedenti alla partenza: aderire con anticipo aumenta la qualità degli abbinamenti."),
         ("Che ruolo hanno le istituzioni brasiliane?",
-         "La missione si svolge con il supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera Italo-Brasiliana di Commercio e Industria e del Sistema Italia, in vista dell'Accordo di Cooperazione con il Governo del Ceará."),
+         "La missione si svolge con il supporto istituzionale del Governo dello Stato del Ceará, della FIEC, della Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro — Delegazione del Ceará e del Sistema Italia, in vista dell'Accordo di Cooperazione con il Governo del Ceará."),
         ("Cos'è il Rinascimento Design District?",
          "È un ecosistema industriale integrato dedicato a design, materiali, interni e manifattura avanzata: un distretto produttivo che collega imprese, fornitori, showroom, logistica, servizi e innovazione. Viene presentato nel corso della missione ed è aperto a progetti di collaborazione, internazionalizzazione e insediamento."),
         ("Come si aderisce e con quali tempi?",
@@ -623,7 +623,7 @@ IT = {
     "foot_nav_h": "Navigazione",
     "foot_ct_h": "Contatti",
     "foot_copy": "© 2026 Studio Armando Rossi &amp; Partners",
-    "foot_note": "Con il supporto del Governo dello Stato del Ceará, della FIEC, della Camera Italo-Brasiliana di Commercio e Industria e del Sistema Italia.",
+    "foot_note": "Con il supporto del Governo dello Stato del Ceará, della FIEC, della Camera Italo-Brasiliana di Commercio e Industria di Rio de Janeiro — Delegazione del Ceará e del Sistema Italia.",
     "lang_label": "Lingua",
 }
 
@@ -677,7 +677,7 @@ EN = {
     "mission_eyebrow": "The mission",
     "mission_h2": "An industrial bridge between Europe and Latin America",
     "mission_p": [
-        "Applications are open for the <strong>Latin America Mission</strong>, promoted by Studio Armando Rossi &amp; Partners, with the institutional support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Sistema Italia.",
+        "Applications are open for the <strong>Latin America Mission</strong>, promoted by Studio Armando Rossi &amp; Partners, with the institutional support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce of Rio de Janeiro (Ceará Delegation) and Sistema Italia.",
         "A business mission dedicated to the opportunities for <strong>internationalisation, export and industrial partnerships</strong> between Europe and Latin America, with B2B meetings, institutional and technical visits and networking activities in the energy, logistics and infrastructure, machinery and plant engineering, agri-food and digital technology sectors.",
         "A special focus on the supply chains of <strong>design, furniture, natural stone, surfaces, materials, interiors and architecture</strong>, with the presentation of the Rinascimento Design District, the new international design ecosystem that integrates industry, raw materials, innovation and logistics.",
         "Participating companies are also offered support in identifying calls and instruments for internationalisation, with access to subsidised loans and non-repayable grants.",
@@ -690,7 +690,7 @@ EN = {
         ("Format", "B2B · Visits · Networking"),
     ],
     "fact_support_k": "Institutional support",
-    "fact_support_v": "Government of the State of Ceará · FIEC – Federation of Industries of the State of Ceará · Italian-Brazilian Chamber of Commerce and Industry · Sistema Italia",
+    "fact_support_v": "Government of the State of Ceará · FIEC – Federation of Industries of the State of Ceará · Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro — Ceará Delegation · Sistema Italia",
     "fact_open_k": "Applications",
     "fact_open_v": "Open",
 
@@ -756,7 +756,7 @@ EN = {
     "val_lede": "A mission is only worth it if it produces relationships you can actually use once you are back. The programme is built on that principle.",
     "values": [
         ("1", "A tailor-made B2B agenda", "Meetings are defined from your company profile, in coordination with trade associations and local partners: you talk to relevant counterparts, not to a generic audience."),
-        ("2", "Direct access to institutions", "The State Government, FIEC, the Italian-Brazilian Chamber and Sistema Italia take part in the mission: decision-makers, in the same room."),
+        ("2", "Direct access to institutions", "The State Government, FIEC, the Italian-Brazilian Chamber of Rio de Janeiro (Ceará Delegation) and Sistema Italia take part in the mission: decision-makers, in the same room."),
         ("3", "Technical visits", "The Port of Pecém, the FTZ Ceará and industrial infrastructure are visited to assess the cost, timing and feasibility of a settlement or supply agreement."),
         ("4", "A platform already mapped out", "The Rinascimento Design District offers a structured entry route for companies evaluating production, showrooms or distribution in Brazil."),
     ],
@@ -836,7 +836,7 @@ EN = {
         ("SENAI Ceará", "Vocational training, laboratories and prototyping."),
     ],
     "inst_eyebrow": "Institutional support",
-    "inst_p": "Government of the State of Ceará · FIEC · Italian-Brazilian Chamber of Commerce and Industry · Sistema Italia",
+    "inst_p": "Government of the State of Ceará · FIEC · Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro — Ceará Delegation · Sistema Italia",
 
     "faq_eyebrow": "Frequently asked questions",
     "faq_h2": "Everything you need to know before applying",
@@ -852,7 +852,7 @@ EN = {
         ("What kind of B2B meetings are planned?",
          "Meetings with companies, trade associations, local partners and institutions, selected on each participating company's profile. That is why the agenda is built in the weeks before departure: applying early improves the quality of the matches."),
         ("What role do the Brazilian institutions play?",
-         "The mission takes place with the institutional support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Industry and Sistema Italia, ahead of the Cooperation Agreement with the Government of Ceará."),
+         "The mission takes place with the institutional support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro — Ceará Delegation and Sistema Italia, ahead of the Cooperation Agreement with the Government of Ceará."),
         ("What is the Rinascimento Design District?",
          "It is an integrated industrial ecosystem dedicated to design, materials, interiors and advanced manufacturing: a productive district connecting companies, suppliers, showrooms, logistics, services and innovation. It is presented during the mission and is open to collaboration, internationalisation and settlement projects."),
         ("How do I apply and by when?",
@@ -948,7 +948,7 @@ EN = {
     "foot_nav_h": "Navigation",
     "foot_ct_h": "Contacts",
     "foot_copy": "© 2026 Studio Armando Rossi &amp; Partners",
-    "foot_note": "With the support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Industry and Sistema Italia.",
+    "foot_note": "With the support of the Government of the State of Ceará, FIEC, the Italian-Brazilian Chamber of Commerce and Industry of Rio de Janeiro — Ceará Delegation and Sistema Italia.",
     "lang_label": "Language",
 }
 
