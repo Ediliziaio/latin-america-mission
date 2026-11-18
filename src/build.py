@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import SITE, LOGOS, IMAGES, LANGS  # noqa: E402
+from tracking_notice import write_notices
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "src")
@@ -386,6 +387,9 @@ def render(t, css, js):
     head = """<!doctype html>
 <html lang="{lang}">
 <head>
+<script defer src="/assets/js/analytics-config.js"></script>
+<script defer src="/assets/js/analytics-loader.js"></script>
+<script defer src="/assets/js/analytics-consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{title}</title>
@@ -907,6 +911,7 @@ def render(t, css, js):
 
 # --------------------------------------------------------------------------- main
 def main():
+    write_notices(ROOT, SITE)
     with open(os.path.join(SRC, "styles.css"), encoding="utf-8") as f:
         css_raw = f.read()
     with open(os.path.join(SRC, "site.js"), encoding="utf-8") as f:
