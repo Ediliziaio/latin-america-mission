@@ -797,7 +797,7 @@ def render(t, css, js):
         <h2>{foot_ct_h}</h2>
         <a href="mailto:{email}">{email}</a>
         <a href="tel:{phone_href}">{phone}</a>
-        <a href="{base}/">latinamericamission.armandorossi.it</a>
+        <a href="{base}/">latinamericamission.it</a>
       </div>
     </div>
     <div class="foot-bot">

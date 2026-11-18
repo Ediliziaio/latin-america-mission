@@ -16,12 +16,12 @@
 - Contatti: info@studioavvocatorossi.it · +39 338 611 5394
 
 ## Pagine
-- [Sito ufficiale (IT)](https://latin-america-mission.vercel.app/): programma, settori, partner, FAQ e modulo di adesione
-- [Official website (EN)](https://latin-america-mission.vercel.app/en/): programme, sectors, partners, FAQ and application form
-- [Site oficial (PT-BR)](https://latin-america-mission.vercel.app/pt/): programação, setores, parceiros, perguntas frequentes e formulário de inscrição
+- [Sito ufficiale (IT)](https://www.latinamericamission.it/): programma, settori, partner, FAQ e modulo di adesione
+- [Official website (EN)](https://www.latinamericamission.it/en/): programme, sectors, partners, FAQ and application form
+- [Site oficial (PT-BR)](https://www.latinamericamission.it/pt/): programação, setores, parceiros, perguntas frequentes e formulário de inscrição
 
 ## Documenti
-- [Economic Report del Governo dello Stato del Ceará (PDF, inglese, 1º luglio 2026)](https://latin-america-mission.vercel.app/assets/docs/economic-report-ceara-2026-07.pdf):
+- [Economic Report del Governo dello Stato del Ceará (PDF, inglese, 1º luglio 2026)](https://www.latinamericamission.it/assets/docs/economic-report-ceara-2026-07.pdf):
   bollettino della Segreteria dello Sviluppo Economico (SDE) con l'arrivo di MG Motor nel polo
   automotive, la crescita del PIL statale, la FTZ Ceará e la presentazione del Pecém Multimodal
   Hub insieme alla Latin America Mission.

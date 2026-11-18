@@ -21,4 +21,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://latin-america-mission.vercel.app/sitemap.xml
+Sitemap: https://www.latinamericamission.it/sitemap.xml

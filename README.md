@@ -72,18 +72,15 @@ npm i -g vercel && cd ~/latin-america-mission && vercel --prod
 
 Il primo `vercel` chiede il login nel browser e crea il progetto; i successivi deployano e basta.
 
-**Stato: online** su https://latin-america-mission.vercel.app (progetto `latin-america-mission`,
+**Stato: online** su https://www.latinamericamission.it (progetto `latin-america-mission`,
 team `ediliziaios-projects`). Ogni push su `main` ridistribuisce da solo.
 
 ### Dominio definitivo
 
-`armandorossi.it` **non è ancora registrato** (nessun record NS), quindi `SITE["base_url"]` punta
-per ora al dominio Vercel: se puntasse a un dominio inesistente, l'`og:image` non caricherebbe
-nelle anteprime social e Google non indicizzerebbe nulla.
-
-Quando `latinamericamission.armandorossi.it` esiste e lo colleghi in *Settings → Domains*,
-rimetti quel dominio in `SITE["base_url"]` ([`src/content.py`](src/content.py)) e rilancia la
-build: canonical, hreflang, `og:image`, `sitemap.xml` e `llms.txt` si riallineano da soli.
+Il dominio pubblico è `www.latinamericamission.it`. `SITE["base_url"]` in
+[`src/content.py`](src/content.py) è la fonte comune per canonical, hreflang,
+`og:image`, `sitemap.xml` e `llms.txt`. Dopo una modifica rilanciare la build;
+non sostituire questa origine con un URL di anteprima Vercel.
 
 ## Modificare i contenuti
 
@@ -190,4 +187,4 @@ se l'utente scorre: a pagina interamente scorsa il totale è ~2,0–2,5 MB.
 - [ ] Verificare in FAQ costi, tempi di adesione e servizi inclusi: i testi attuali sono
       formulati in modo prudente e vanno confermati dallo Studio
 - [ ] Pagina privacy policy e cookie policy (il form raccoglie dati personali)
-- [ ] Collegare il dominio `latinamericamission.armandorossi.it`
+- [x] Collegare il dominio pubblico `www.latinamericamission.it`
