@@ -394,6 +394,7 @@ def render(t, css, js):
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<meta name="google-site-verification" content="{verification}">
 <link rel="canonical" href="{canonical}">
 {hreflangs}
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -440,7 +441,7 @@ def render(t, css, js):
 </header>
 """.format(
         lang=t["lang"], title=t["title"], desc=plain(t["meta_desc"]), canonical=canonical,
-        hreflangs=hreflangs, promoter=plain(SITE["promoter"]),
+        hreflangs=hreflangs, promoter=plain(SITE["promoter"]), verification=plain(SITE["google_site_verification"]),
         locale=t["locale"], og_title=plain(t["og_title"]), og_desc=plain(t["og_desc"]),
         base=BASE, p=p, css=css, jsonld=build_jsonld(t), skip=t["skip"],
         nav_label=t["nav_aria"], nav_items=nav_items, lang_switch=lang_switch,

@@ -4,6 +4,8 @@
 SITE = {
     # Unica origine pubblica per canonical, hreflang, immagini social e sitemap.
     "base_url": "https://www.latinamericamission.it",
+    # Tag pubblico di verifica Search Console, da conservare dopo la verifica.
+    "google_site_verification": "t89tS0RGgtpDio18458B_jUo1OHwx9OaHvFgReche84",
     "email": "info@studioavvocatorossi.it",
     "phone_display": "+39 338 611 5394",
     "phone_href": "+393386115394",
